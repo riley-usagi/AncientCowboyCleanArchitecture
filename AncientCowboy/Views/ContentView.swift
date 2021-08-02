@@ -10,6 +10,9 @@ struct ContentView: View {
   
   var body: some View {
     Text("Hello, world!")
+      .onAppear {
+        container.interactors.itemsInteractor.storeAllItemsFromWeb()
+      }
   }
   
   

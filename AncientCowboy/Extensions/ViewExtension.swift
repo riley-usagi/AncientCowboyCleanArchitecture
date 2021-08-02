@@ -2,8 +2,8 @@ import SwiftUI
 
 extension View {
   
-  func inject() -> some View {
-    let container = Container()
+  func inject(_ interactors: Container.Interactors) -> some View {
+    let container = Container(interactors: interactors)
     
     return inject(container)
   }

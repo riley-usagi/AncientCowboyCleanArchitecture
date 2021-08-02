@@ -12,8 +12,16 @@ extension AppEnvironment {
   /// - Returns: Объект окружения
   static func bootstrap() -> AppEnvironment {
     
+    /// Локальное динамическое хранилище
+    let appState = Store<AppState>(AppState())
+    
+    /// Список настроенных интеракторов
+    let interactors = configuredInteractors(
+      appState: appState
+    )
+    
     /// Контейнер с зависимостями
-    let container = Container()
+    let container = Container(interactors: interactors)
     
     return AppEnvironment(container: container)
   }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
+		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
@@ -14,9 +16,14 @@
 		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
 		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
 		BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED626B8134800008CBC /* ViewExtension.swift */; };
+		BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */; };
+		BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDB26B818EC00008CBC /* Interactors.swift */; };
+		BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCowboyApp.swift; sourceTree = "<group>"; };
 		BF940DF326B7EB2000906BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +33,9 @@
 		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		BFE72ED626B8134800008CBC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInteractor.swift; sourceTree = "<group>"; };
+		BFE72EDB26B818EC00008CBC /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
+		BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredInteractors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF6A78D126B93C34007BA8AF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BF6A78D226B93C42007BA8AF /* Store.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		BF940DE526B7EB2000906BB9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +78,11 @@
 			children = (
 				BFE72ED526B8133500008CBC /* Extensions */,
 				BFBC6BCB26B802C30069C51F /* Injected */,
+				BFE72ED826B8181D00008CBC /* Interactors */,
 				BF940DF726B7EB2000906BB9 /* Preview Content */,
 				BFBC6BC426B7FB2A0069C51F /* Resources */,
 				BFBC6BC326B7FB1F0069C51F /* System */,
+				BF6A78D126B93C34007BA8AF /* Utilities */,
 				BFBC6BC526B7FB350069C51F /* Views */,
 			);
 			path = AncientCowboy;
@@ -79,6 +99,7 @@
 		BFBC6BC326B7FB1F0069C51F /* System */ = {
 			isa = PBXGroup;
 			children = (
+				BFE72EDD26B81A1300008CBC /* AppEnvironment extensions */,
 				BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */,
 				BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */,
 			);
@@ -106,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				BFBC6BCC26B802D20069C51F /* Container.swift */,
+				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
+				BF6A78CF26B93C0F007BA8AF /* AppState.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -116,6 +139,22 @@
 				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFE72ED826B8181D00008CBC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		BFE72EDD26B81A1300008CBC /* AppEnvironment extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */,
+			);
+			path = "AppEnvironment extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +228,13 @@
 			files = (
 				BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */,
 				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
+				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
+				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
+				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
+				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
+				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

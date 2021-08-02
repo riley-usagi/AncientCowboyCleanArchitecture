@@ -8,13 +8,16 @@ struct Container: EnvironmentKey {
   
   static var defaultValue: Self { Self.default }
   
-  private static let `default` = Self()
+  private static let `default` = Self(interactors: .stub)
   
   
   // MARK: - Параметры
-  
+  let interactors: Interactors
   
   // MARK: - Инициализаторы
+  init(interactors: Interactors) {
+    self.interactors = interactors
+  }
 }
 
 
