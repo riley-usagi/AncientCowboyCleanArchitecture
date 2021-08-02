@@ -1,17 +1,21 @@
-//
-//  AncientCowboyApp.swift
-//  AncientCowboy
-//
-//  Created by Riley Usagi on 02.08.2021.
-//
-
 import SwiftUI
 
-@main
-struct AncientCowboyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+@main struct AncientCowboyApp: App {
+  
+  // MARK: - Параметры
+  
+  /// Объект окружения приложения
+  let environment: AppEnvironment
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView(container: environment.container)
     }
+  }
+  
+  
+  // MARK: - Инициализаторы
+  init() {
+    environment = AppEnvironment.bootstrap()
+  }
 }

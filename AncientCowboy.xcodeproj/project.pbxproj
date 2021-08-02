@@ -11,6 +11,8 @@
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
 		BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */; };
+		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
+		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		BF940DF526B7EB2000906BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF940DFA26B7EB2000906BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		BF940DF026B7EB2000906BB9 /* AncientCowboy */ = {
 			isa = PBXGroup;
 			children = (
+				BFBC6BCB26B802C30069C51F /* Injected */,
 				BF940DF726B7EB2000906BB9 /* Preview Content */,
 				BFBC6BC426B7FB2A0069C51F /* Resources */,
 				BFBC6BC326B7FB1F0069C51F /* System */,
@@ -72,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */,
+				BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -91,6 +97,14 @@
 				BF940DF326B7EB2000906BB9 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFBC6BCB26B802C30069C51F /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				BFBC6BCC26B802D20069C51F /* Container.swift */,
+			);
+			path = Injected;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */,
+				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
+				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
