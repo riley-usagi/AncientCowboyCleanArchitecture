@@ -13,6 +13,7 @@
 		BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */; };
 		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
 		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
+		BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED626B8134800008CBC /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF940DFA26B7EB2000906BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		BFE72ED626B8134800008CBC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		BF940DF026B7EB2000906BB9 /* AncientCowboy */ = {
 			isa = PBXGroup;
 			children = (
+				BFE72ED526B8133500008CBC /* Extensions */,
 				BFBC6BCB26B802C30069C51F /* Injected */,
 				BF940DF726B7EB2000906BB9 /* Preview Content */,
 				BFBC6BC426B7FB2A0069C51F /* Resources */,
@@ -105,6 +108,14 @@
 				BFBC6BCC26B802D20069C51F /* Container.swift */,
 			);
 			path = Injected;
+			sourceTree = "<group>";
+		};
+		BFE72ED526B8133500008CBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
+				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
