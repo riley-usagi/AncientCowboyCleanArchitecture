@@ -26,6 +26,11 @@
 		BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */; };
 		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
 		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
+		BFDED2ED26B9A74400B05A5E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDED2EC26B9A74400B05A5E /* keys.plist */; };
+		BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F426B9AB1100B05A5E /* CancelBag.swift */; };
+		BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */; };
+		BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */; };
+		BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */; };
 		BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED626B8134800008CBC /* ViewExtension.swift */; };
 		BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */; };
 		BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDB26B818EC00008CBC /* Interactors.swift */; };
@@ -54,6 +59,11 @@
 		BF940DFA26B7EB2000906BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		BFDED2EC26B9A74400B05A5E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		BFDED2F426B9AB1100B05A5E /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCancellableExtension.swift; sourceTree = "<group>"; };
+		BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
+		BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfoExtension.swift; sourceTree = "<group>"; };
 		BFE72ED626B8134800008CBC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInteractor.swift; sourceTree = "<group>"; };
 		BFE72EDB26B818EC00008CBC /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BF25DC8726B96F53006D4F5C /* APICall.swift */,
+				BFDED2F426B9AB1100B05A5E /* CancelBag.swift */,
 				BF6A78D226B93C42007BA8AF /* Store.swift */,
 				BF25DC9026B975E0006D4F5C /* WebService.swift */,
 			);
@@ -186,6 +197,7 @@
 			children = (
 				BF940DF526B7EB2000906BB9 /* Assets.xcassets */,
 				BF940DFA26B7EB2000906BB9 /* Info.plist */,
+				BFDED2EC26B9A74400B05A5E /* keys.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,9 +225,12 @@
 		BFE72ED526B8133500008CBC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */,
+				BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */,
 				BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */,
-				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
+				BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */,
 				BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */,
+				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +312,7 @@
 			files = (
 				BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */,
 				BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */,
+				BFDED2ED26B9A74400B05A5E /* keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +331,7 @@
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
+				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
@@ -323,10 +340,13 @@
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
+				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
+				BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */,
 				BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,
+				BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
