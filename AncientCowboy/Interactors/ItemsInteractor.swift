@@ -8,6 +8,8 @@ struct RealItemsInteractor: ItemsInteractor {
   
   let appState: Store<AppState>
   
+  let webService: ItemsWebService
+  
   func storeAllItemsFromWeb() {
     print("Loading items from web")
   }

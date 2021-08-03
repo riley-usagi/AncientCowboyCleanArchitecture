@@ -13,6 +13,11 @@
 		BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */; };
 		BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */; };
 		BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9026B975E0006D4F5C /* WebService.swift */; };
+		BF25DC9726B98801006D4F5C /* ItemsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9626B98801006D4F5C /* ItemsWebService.swift */; };
+		BF25DC9A26B98848006D4F5C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9926B98848006D4F5C /* Item.swift */; };
+		BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9B26B98A26006D4F5C /* WebServices.swift */; };
+		BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */; };
+		BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
@@ -34,6 +39,11 @@
 		BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCodesExtension.swift; sourceTree = "<group>"; };
 		BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtension.swift; sourceTree = "<group>"; };
 		BF25DC9026B975E0006D4F5C /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		BF25DC9626B98801006D4F5C /* ItemsWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsWebService.swift; sourceTree = "<group>"; };
+		BF25DC9926B98848006D4F5C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BF25DC9B26B98A26006D4F5C /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWebServices.swift; sourceTree = "<group>"; };
+		BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredSession.swift; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +95,30 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		BF25DC9426B987F0006D4F5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF25DC9526B987F7006D4F5C /* Web */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BF25DC9526B987F7006D4F5C /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				BF25DC9626B98801006D4F5C /* ItemsWebService.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		BF25DC9826B9883D006D4F5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF25DC9926B98848006D4F5C /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +152,10 @@
 				BFE72ED526B8133500008CBC /* Extensions */,
 				BFBC6BCB26B802C30069C51F /* Injected */,
 				BFE72ED826B8181D00008CBC /* Interactors */,
+				BF25DC9826B9883D006D4F5C /* Models */,
 				BF940DF726B7EB2000906BB9 /* Preview Content */,
 				BFBC6BC426B7FB2A0069C51F /* Resources */,
+				BF25DC9426B987F0006D4F5C /* Services */,
 				BFBC6BC326B7FB1F0069C51F /* System */,
 				BF6A78D126B93C34007BA8AF /* Utilities */,
 				BFBC6BC526B7FB350069C51F /* Views */,
@@ -148,8 +184,8 @@
 		BFBC6BC426B7FB2A0069C51F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF940DFA26B7EB2000906BB9 /* Info.plist */,
 				BF940DF526B7EB2000906BB9 /* Assets.xcassets */,
+				BF940DFA26B7EB2000906BB9 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,9 +202,10 @@
 		BFBC6BCB26B802C30069C51F /* Injected */ = {
 			isa = PBXGroup;
 			children = (
+				BF6A78CF26B93C0F007BA8AF /* AppState.swift */,
 				BFBC6BCC26B802D20069C51F /* Container.swift */,
 				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
-				BF6A78CF26B93C0F007BA8AF /* AppState.swift */,
+				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -195,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */,
+				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
+				BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */,
 			);
 			path = "AppEnvironment extensions";
 			sourceTree = "<group>";
@@ -270,16 +309,21 @@
 			files = (
 				BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */,
 				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
+				BF25DC9726B98801006D4F5C /* ItemsWebService.swift in Sources */,
 				BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */,
 				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
+				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
+				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
+				BF25DC9A26B98848006D4F5C /* Item.swift in Sources */,
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
+				BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,

@@ -13,11 +13,17 @@ extension AppEnvironment {
   static func bootstrap() -> AppEnvironment {
     
     /// Локальное динамическое хранилище
-    let appState = Store<AppState>(AppState())
+    let appState    = Store<AppState>(AppState())
+    
+    /// Настроенный
+    let session     = configuredSession()
+    
+    let webServices = configuredWebServices(session: session)
     
     /// Список настроенных интеракторов
     let interactors = configuredInteractors(
-      appState: appState
+      appState: appState,
+      webServices: webServices
     )
     
     /// Контейнер с зависимостями
