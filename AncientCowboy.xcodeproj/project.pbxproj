@@ -31,6 +31,11 @@
 		BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */; };
 		BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */; };
 		BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */; };
+		BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2FE26B9B7A800B05A5E /* JustExtension.swift */; };
+		BFDED30126B9B86200B05A5E /* ResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED30026B9B86200B05A5E /* ResultExtension.swift */; };
+		BFDED30326B9B8AB00B05A5E /* SubscribersCompletionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED30226B9B8AB00B05A5E /* SubscribersCompletionExtension.swift */; };
+		BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED30426B9B91300B05A5E /* OptionalExtension.swift */; };
+		BFDED30726B9B9E300B05A5E /* ManagedEntityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED30626B9B9E300B05A5E /* ManagedEntityExtension.swift */; };
 		BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED626B8134800008CBC /* ViewExtension.swift */; };
 		BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */; };
 		BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDB26B818EC00008CBC /* Interactors.swift */; };
@@ -64,6 +69,11 @@
 		BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCancellableExtension.swift; sourceTree = "<group>"; };
 		BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtension.swift; sourceTree = "<group>"; };
 		BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfoExtension.swift; sourceTree = "<group>"; };
+		BFDED2FE26B9B7A800B05A5E /* JustExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustExtension.swift; sourceTree = "<group>"; };
+		BFDED30026B9B86200B05A5E /* ResultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultExtension.swift; sourceTree = "<group>"; };
+		BFDED30226B9B8AB00B05A5E /* SubscribersCompletionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribersCompletionExtension.swift; sourceTree = "<group>"; };
+		BFDED30426B9B91300B05A5E /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
+		BFDED30626B9B9E300B05A5E /* ManagedEntityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEntityExtension.swift; sourceTree = "<group>"; };
 		BFE72ED626B8134800008CBC /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInteractor.swift; sourceTree = "<group>"; };
 		BFE72EDB26B818EC00008CBC /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
@@ -228,8 +238,13 @@
 				BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */,
 				BFDED2F826B9ABA300B05A5E /* ErrorExtension.swift */,
 				BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */,
+				BFDED2FE26B9B7A800B05A5E /* JustExtension.swift */,
+				BFDED30626B9B9E300B05A5E /* ManagedEntityExtension.swift */,
+				BFDED30426B9B91300B05A5E /* OptionalExtension.swift */,
 				BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */,
 				BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */,
+				BFDED30026B9B86200B05A5E /* ResultExtension.swift */,
+				BFDED30226B9B8AB00B05A5E /* SubscribersCompletionExtension.swift */,
 				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
 			);
 			path = Extensions;
@@ -328,15 +343,20 @@
 				BF25DC9726B98801006D4F5C /* ItemsWebService.swift in Sources */,
 				BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */,
 				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
+				BFDED30326B9B8AB00B05A5E /* SubscribersCompletionExtension.swift in Sources */,
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
+				BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
+				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
+				BFDED30726B9B9E300B05A5E /* ManagedEntityExtension.swift in Sources */,
 				BF25DC9A26B98848006D4F5C /* Item.swift in Sources */,
+				BFDED30126B9B86200B05A5E /* ResultExtension.swift in Sources */,
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
