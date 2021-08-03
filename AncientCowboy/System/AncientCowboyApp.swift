@@ -32,7 +32,10 @@ enum RegistrationStatus: String, CaseIterable {
           )
           
         case .notRegistered:
-          AnyView(Text("Registration view"))
+          AnyView(
+            RegistrationScreen()
+              .inject(environment.container)
+          )
           
         case .alreadyRegistered:
           AnyView(ContentView(container: environment.container))
