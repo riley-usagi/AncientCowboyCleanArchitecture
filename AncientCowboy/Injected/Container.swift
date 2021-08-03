@@ -8,15 +8,25 @@ struct Container: EnvironmentKey {
   
   static var defaultValue: Self { Self.default }
   
-  private static let `default` = Self(interactors: .stub)
+  private static let `default` = Self(appState: AppState(), interactors: .stub)
   
   
   // MARK: - Параметры
+  
+  /// Локальное динамческое хранилище
+  let appState: Store<AppState>
+  
+  /// Список интеракторов
   let interactors: Interactors
   
   // MARK: - Инициализаторы
-  init(interactors: Interactors) {
-    self.interactors = interactors
+  init(appState: Store<AppState>, interactors: Interactors) {
+    self.appState     = appState
+    self.interactors  = interactors
+  }
+  
+  init(appState: AppState, interactors: Interactors) {
+    self.init(appState: Store<AppState>(appState), interactors: interactors)
   }
 }
 

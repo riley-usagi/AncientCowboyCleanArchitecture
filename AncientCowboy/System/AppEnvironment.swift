@@ -21,7 +21,10 @@ extension AppEnvironment {
     )
     
     /// Контейнер с зависимостями
-    let container = Container(interactors: interactors)
+    let container = Container(
+      appState: appState,
+      interactors: interactors
+    )
     
     return AppEnvironment(container: container)
   }
