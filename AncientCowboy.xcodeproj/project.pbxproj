@@ -11,6 +11,8 @@
 		BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8726B96F53006D4F5C /* APICall.swift */; };
 		BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8A26B96FB6006D4F5C /* APIError.swift */; };
 		BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */; };
+		BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */; };
+		BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9026B975E0006D4F5C /* WebService.swift */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
@@ -30,6 +32,8 @@
 		BF25DC8726B96F53006D4F5C /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		BF25DC8A26B96FB6006D4F5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCodesExtension.swift; sourceTree = "<group>"; };
+		BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtension.swift; sourceTree = "<group>"; };
+		BF25DC9026B975E0006D4F5C /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,8 +88,9 @@
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				BF6A78D226B93C42007BA8AF /* Store.swift */,
 				BF25DC8726B96F53006D4F5C /* APICall.swift */,
+				BF6A78D226B93C42007BA8AF /* Store.swift */,
+				BF25DC9026B975E0006D4F5C /* WebService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */,
 				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
+				BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,9 +278,11 @@
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
+				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
+				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
