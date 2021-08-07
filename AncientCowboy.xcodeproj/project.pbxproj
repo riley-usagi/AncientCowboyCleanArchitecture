@@ -18,6 +18,7 @@
 		BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9B26B98A26006D4F5C /* WebServices.swift */; };
 		BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */; };
 		BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */; };
+		BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
@@ -54,6 +55,7 @@
 		BF25DC9B26B98A26006D4F5C /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWebServices.swift; sourceTree = "<group>"; };
 		BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredSession.swift; sourceTree = "<group>"; };
+		BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AncientCowboyDataBase.xcdatamodel; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BF59E09B26BEAD1300C6AF32 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		BF940DF026B7EB2000906BB9 /* AncientCowboy */ = {
 			isa = PBXGroup;
 			children = (
+				BF59E09B26BEAD1300C6AF32 /* Persistence */,
 				BF25DC8926B96FA7006D4F5C /* Errors */,
 				BFE72ED526B8133500008CBC /* Extensions */,
 				BFBC6BCB26B802C30069C51F /* Injected */,
@@ -355,6 +366,7 @@
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
 				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
 				BFDED30726B9B9E300B05A5E /* ManagedEntityExtension.swift in Sources */,
+				BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */,
 				BF25DC9A26B98848006D4F5C /* Item.swift in Sources */,
 				BFDED30126B9B86200B05A5E /* ResultExtension.swift in Sources */,
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
@@ -556,6 +568,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */,
+			);
+			currentVersion = BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */;
+			path = AncientCowboyDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF940DE626B7EB2000906BB9 /* Project object */;
 }
