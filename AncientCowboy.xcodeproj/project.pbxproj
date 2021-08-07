@@ -21,6 +21,9 @@
 		BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
+		BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */; };
+		BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */; };
+		BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AncientCowboyDataBase.xcdatamodel; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
+		BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSetExtension.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCowboyApp.swift; sourceTree = "<group>"; };
 		BF940DF326B7EB2000906BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */,
+				BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -179,12 +186,12 @@
 		BF940DF026B7EB2000906BB9 /* AncientCowboy */ = {
 			isa = PBXGroup;
 			children = (
-				BF59E09B26BEAD1300C6AF32 /* Persistence */,
 				BF25DC8926B96FA7006D4F5C /* Errors */,
 				BFE72ED526B8133500008CBC /* Extensions */,
 				BFBC6BCB26B802C30069C51F /* Injected */,
 				BFE72ED826B8181D00008CBC /* Interactors */,
 				BF25DC9826B9883D006D4F5C /* Models */,
+				BF59E09B26BEAD1300C6AF32 /* Persistence */,
 				BF940DF726B7EB2000906BB9 /* Preview Content */,
 				BFBC6BC426B7FB2A0069C51F /* Resources */,
 				BF25DC9426B987F0006D4F5C /* Services */,
@@ -251,12 +258,14 @@
 				BF25DC8C26B970D0006D4F5C /* HTTPCodesExtension.swift */,
 				BFDED2FE26B9B7A800B05A5E /* JustExtension.swift */,
 				BFDED30626B9B9E300B05A5E /* ManagedEntityExtension.swift */,
+				BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */,
 				BFDED30426B9B91300B05A5E /* OptionalExtension.swift */,
 				BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */,
 				BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */,
 				BFDED30026B9B86200B05A5E /* ResultExtension.swift */,
 				BFDED30226B9B8AB00B05A5E /* SubscribersCompletionExtension.swift */,
 				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
+				BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
 				BFDED30326B9B8AB00B05A5E /* SubscribersCompletionExtension.swift in Sources */,
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
+				BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */,
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
 				BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
@@ -373,11 +383,13 @@
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
+				BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */,
 				BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */,
 				BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,
+				BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */,
 				BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
 			);
