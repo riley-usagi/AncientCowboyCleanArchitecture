@@ -13,7 +13,7 @@ struct RegistrationScreen: View {
       Spacer()
       
       Button(action: {
-        container.appState.value.dataPreloaded = true
+        container.interactors.itemsInteractor.storeAllItemsFromWeb()
       }, label: {
         Text("Load data")
       })

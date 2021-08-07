@@ -1,3 +1,4 @@
+import Combine
 import SwiftUI
 
 protocol ItemsInteractor {
@@ -10,8 +11,27 @@ struct RealItemsInteractor: ItemsInteractor {
   
   let webService: ItemsWebService
   
+  let cancelBag = CancelBag()
+  
   func storeAllItemsFromWeb() {
-    print("Loading items from web")
+    
+    loadItemsFromWeb()
+      .sinkToResult { itemsListAsResult in
+        switch itemsListAsResult {
+        
+        case .success:
+          print(try? itemsListAsResult.get().first?.name)
+        case let .failure(error):
+          print(String(describing: error))
+        }
+      }
+      .store(in: cancelBag)
+  }
+  
+  private func loadItemsFromWeb() -> AnyPublisher<[Item], Error> {
+    return webService
+      .loadItemsFromWeb()
+      .eraseToAnyPublisher()
   }
 }
 
