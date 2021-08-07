@@ -11,6 +11,8 @@ struct RealItemsInteractor: ItemsInteractor {
   
   let webService: ItemsWebService
   
+  let dbService: ItemsDBService
+  
   let cancelBag = CancelBag()
   
   func storeAllItemsFromWeb() {

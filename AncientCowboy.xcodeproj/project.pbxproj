@@ -24,6 +24,9 @@
 		BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */; };
 		BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */; };
 		BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */; };
+		BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */; };
+		BF77604426BEB44000B3D43E /* DBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604326BEB44000B3D43E /* DBServices.swift */; };
+		BF77604626BEB49200B3D43E /* ConfiguredDBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
@@ -64,6 +67,9 @@
 		BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
 		BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSSetExtension.swift; sourceTree = "<group>"; };
+		BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDBService.swift; sourceTree = "<group>"; };
+		BF77604326BEB44000B3D43E /* DBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBServices.swift; sourceTree = "<group>"; };
+		BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredDBServices.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCowboyApp.swift; sourceTree = "<group>"; };
 		BF940DF326B7EB2000906BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 		BF25DC9426B987F0006D4F5C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF77604026BEB39C00B3D43E /* DataBase */,
 				BF25DC9526B987F7006D4F5C /* Web */,
 			);
 			path = Services;
@@ -165,6 +172,14 @@
 				BF25DC9026B975E0006D4F5C /* WebService.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BF77604026BEB39C00B3D43E /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		BF940DE526B7EB2000906BB9 = {
@@ -246,6 +261,7 @@
 				BFBC6BCC26B802D20069C51F /* Container.swift */,
 				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
 				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
+				BF77604326BEB44000B3D43E /* DBServices.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -259,13 +275,13 @@
 				BFDED2FE26B9B7A800B05A5E /* JustExtension.swift */,
 				BFDED30626B9B9E300B05A5E /* ManagedEntityExtension.swift */,
 				BF77603C26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift */,
+				BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */,
 				BFDED30426B9B91300B05A5E /* OptionalExtension.swift */,
 				BFDED2FA26B9AC3700B05A5E /* ProcessInfoExtension.swift */,
 				BF25DC8E26B974B4006D4F5C /* PublisherExtension.swift */,
 				BFDED30026B9B86200B05A5E /* ResultExtension.swift */,
 				BFDED30226B9B8AB00B05A5E /* SubscribersCompletionExtension.swift */,
 				BFE72ED626B8134800008CBC /* ViewExtension.swift */,
-				BF77603E26BEAF2D00B3D43E /* NSSetExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,9 +297,10 @@
 		BFE72EDD26B81A1300008CBC /* AppEnvironment extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */,
 				BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */,
-				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
 				BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */,
+				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
 			);
 			path = "AppEnvironment extensions";
 			sourceTree = "<group>";
@@ -371,6 +388,7 @@
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
+				BF77604426BEB44000B3D43E /* DBServices.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
@@ -382,9 +400,11 @@
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
+				BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
 				BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */,
 				BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */,
+				BF77604626BEB49200B3D43E /* ConfiguredDBServices.swift in Sources */,
 				BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,

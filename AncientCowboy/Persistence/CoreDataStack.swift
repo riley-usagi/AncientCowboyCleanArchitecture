@@ -4,14 +4,10 @@ import CoreData
 protocol PersistentStore {
   typealias DBOperation<Result> = (NSManagedObjectContext) throws -> Result
   
-  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error>
+//  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error>
 }
 
 struct CoreDataStack: PersistentStore {
-  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error> {
-    
-  }
-  
   
   private let container: NSPersistentContainer
   private let bgQueue = DispatchQueue(label: "coredata")
