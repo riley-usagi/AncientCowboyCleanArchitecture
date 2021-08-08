@@ -31,6 +31,8 @@
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
 		BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */; };
+		BF97543726BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97543526BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift */; };
+		BF97543826BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */; };
 		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
 		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
 		BFDED2ED26B9A74400B05A5E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDED2EC26B9A74400B05A5E /* keys.plist */; };
@@ -76,6 +78,8 @@
 		BF940DF526B7EB2000906BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF940DFA26B7EB2000906BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF97543526BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemModelObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemModelObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		BFDED2EC26B9A74400B05A5E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		BF25DC9826B9883D006D4F5C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF97543426BFBF63001DC3ED /* CoreData */,
 				BF25DC9926B98848006D4F5C /* Item.swift */,
 			);
 			path = Models;
@@ -223,6 +228,15 @@
 				BF940DF826B7EB2000906BB9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF97543426BFBF63001DC3ED /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BF97543526BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift */,
+				BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BFBC6BC326B7FB1F0069C51F /* System */ = {
@@ -384,6 +398,7 @@
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
 				BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */,
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
+				BF97543726BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift in Sources */,
 				BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
@@ -399,6 +414,7 @@
 				BFDED30126B9B86200B05A5E /* ResultExtension.swift in Sources */,
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
+				BF97543826BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,

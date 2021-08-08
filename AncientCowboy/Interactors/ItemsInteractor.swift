@@ -17,15 +17,13 @@ struct RealItemsInteractor: ItemsInteractor {
   
   func storeAllItemsFromWeb() {
     
-    loadItemsFromWeb()
-      .sinkToResult { itemsListAsResult in
-        switch itemsListAsResult {
-        
-        case .success:
-          print(try? itemsListAsResult.get().first?.name)
-        case let .failure(error):
-          print(String(describing: error))
-        }
+    webService
+      .loadItemsFromWeb()
+      .flatMap { [dbService] items -> AnyPublisher<Void, Error> in
+        dbService.storeAllItemsFromWeb(items)
+      }
+      .sinkToResult { _ in
+        appState.value.dataPreloaded = true
       }
       .store(in: cancelBag)
   }

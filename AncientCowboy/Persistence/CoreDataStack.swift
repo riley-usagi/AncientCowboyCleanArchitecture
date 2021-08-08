@@ -4,7 +4,7 @@ import CoreData
 protocol PersistentStore {
   typealias DBOperation<Result> = (NSManagedObjectContext) throws -> Result
   
-//  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error>
+  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error>
 }
 
 struct CoreDataStack: PersistentStore {
@@ -39,6 +39,46 @@ struct CoreDataStack: PersistentStore {
         }
       })
     }
+  }
+  
+  
+  // MARK: - Methods
+  
+  func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error> {
+    let update = Future<Result, Error> { [weak bgQueue, weak container] promise in
+      bgQueue?.async {
+        
+        guard let context = container?.newBackgroundContext() else { return }
+        
+        context.configureAsUpdateContext()
+        
+        context.performAndWait {
+          do {
+            let result = try operation(context)
+            if context.hasChanges {
+              try context.save()
+            }
+            context.reset()
+            promise(.success(result))
+          } catch {
+            context.reset()
+            promise(.failure(error))
+          }
+        }
+      }
+    }
+    
+    return onStoreIsReady
+      .flatMap { update }
+      .receive(on: DispatchQueue.main)
+      .eraseToAnyPublisher()
+  }
+  
+  private var onStoreIsReady: AnyPublisher<Void, Error> {
+    return isStoreLoaded
+      .filter { $0 }
+      .map { _ in }
+      .eraseToAnyPublisher()
   }
 }
 

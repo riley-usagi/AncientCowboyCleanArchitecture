@@ -7,11 +7,16 @@ protocol ItemsDBService {
 
 struct RealItemsDBService: ItemsDBService {
   
-  
   let persistentStore: PersistentStore
   
   func storeAllItemsFromWeb(_ items: [Item]) -> AnyPublisher<Void, Error> {
-    #warning("Here")
-    return Just<Void>.withErrorType(Error.self).eraseToAnyPublisher()
+    
+    return persistentStore
+      .update { context in
+        items.forEach { item in
+          item.store(in: context)
+        }
+      }
   }
 }
+
