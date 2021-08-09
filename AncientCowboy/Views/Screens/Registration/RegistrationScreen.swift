@@ -174,6 +174,7 @@ struct RegistrationScreen: View {
     
     .onAppear {
       if !dataPreloaded {
+        container.interactors.monstersInteractor.storeAllMonstersFromWeb()
         container.interactors.itemsInteractor.storeAllItemsFromWeb()
       }
     }

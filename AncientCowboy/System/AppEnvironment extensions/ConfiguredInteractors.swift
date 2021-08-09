@@ -19,9 +19,16 @@ extension AppEnvironment {
       fbService: fbServices.heroesFBService
     )
     
+    let monstersInteractor = RealMonstersInteractor(
+      appState: appState,
+      dbService: dbServices.monstersDBService,
+      webService: webServices.monstersWebService
+    )
+    
     return .init(
       itemsInteractor: itemsInteractor,
-      heroesInteractor: heroesInteractor
+      heroesInteractor: heroesInteractor,
+      monstersInteractor: monstersInteractor
     )
   }
 }

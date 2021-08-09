@@ -1,15 +1,25 @@
-//
-//  InventoryItemModelObject+CoreDataClass.swift
-//  AncientCowboy
-//
-//  Created by Riley Usagi on 09.08.2021.
-//
-//
-
-import Foundation
 import CoreData
+import Foundation
 
 @objc(InventoryItemModelObject)
 public class InventoryItemModelObject: NSManagedObject {
-
+  
+  static func item(by id: Int) -> NSFetchRequest<InventoryItemModelObject> {
+    let request = newFetchRequest()
+    
+    let predicate = NSPredicate(format: "ingameid == %@", String(id))
+    
+    request.predicate = predicate
+    
+    request.fetchLimit = 1
+    
+    return request
+  }
+  
+  static func items() -> NSFetchRequest<InventoryItemModelObject> {
+    
+    let request = newFetchRequest()
+    
+    return request
+  }
 }

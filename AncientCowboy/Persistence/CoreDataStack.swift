@@ -44,6 +44,7 @@ struct CoreDataStack: PersistentStore {
   
   // MARK: - Methods
   
+  
   func update<Result>(_ operation: @escaping DBOperation<Result>) -> AnyPublisher<Result, Error> {
     let update = Future<Result, Error> { [weak bgQueue, weak container] promise in
       bgQueue?.async {

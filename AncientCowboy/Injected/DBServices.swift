@@ -3,8 +3,13 @@ extension Container {
   struct DBServices {
     let itemsDBService: ItemsDBService
     
-    init(itemsDBService: ItemsDBService) {
-      self.itemsDBService = itemsDBService
+    let monstersDBService: MonstersDBService
+    
+    init(
+      itemsDBService: ItemsDBService,
+      monstersDBService: MonstersDBService) {
+      self.itemsDBService     = itemsDBService
+      self.monstersDBService  = monstersDBService
     }
   }
 }

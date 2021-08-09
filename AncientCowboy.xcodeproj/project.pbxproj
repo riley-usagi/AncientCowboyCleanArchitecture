@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0EDC0C26C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0826C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift */; };
+		BF0EDC0D26C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0926C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift */; };
+		BF0EDC0E26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0A26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift */; };
+		BF0EDC0F26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0B26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift */; };
+		BF0EDC1126C12AA200AAB245 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1026C12AA200AAB245 /* Monster.swift */; };
+		BF0EDC1326C12AE100AAB245 /* MonstersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1226C12AE100AAB245 /* MonstersInteractor.swift */; };
+		BF0EDC1526C12B4A00AAB245 /* MonstersWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */; };
+		BF0EDC1726C12B6E00AAB245 /* MonstersDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1626C12B6E00AAB245 /* MonstersDBService.swift */; };
 		BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC7F26B968EB006D4F5C /* RegistrationScreen.swift */; };
 		BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8726B96F53006D4F5C /* APICall.swift */; };
 		BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8A26B96FB6006D4F5C /* APIError.swift */; };
@@ -36,6 +44,10 @@
 		BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */; };
 		BF77604426BEB44000B3D43E /* DBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604326BEB44000B3D43E /* DBServices.swift */; };
 		BF77604626BEB49200B3D43E /* ConfiguredDBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */; };
+		BF796F4626C149AD00D21999 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF796F4526C149AD00D21999 /* Loadable.swift */; };
+		BF796F4A26C14F6400D21999 /* LazyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF796F4926C14F6400D21999 /* LazyList.swift */; };
+		BF796F4C26C14FCF00D21999 /* LazyListCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF796F4B26C14FCF00D21999 /* LazyListCache.swift */; };
+		BF796F4E26C151D700D21999 /* LazyListIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF796F4D26C151D700D21999 /* LazyListIterator.swift */; };
 		BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */; };
 		BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF940DF326B7EB2000906BB9 /* ContentView.swift */; };
 		BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF940DF526B7EB2000906BB9 /* Assets.xcassets */; };
@@ -61,6 +73,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0EDC0826C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryItemModelObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF0EDC0926C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryItemModelObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF0EDC0A26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonsterModelObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BF0EDC0B26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonsterModelObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF0EDC1026C12AA200AAB245 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		BF0EDC1226C12AE100AAB245 /* MonstersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersInteractor.swift; sourceTree = "<group>"; };
+		BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersWebService.swift; sourceTree = "<group>"; };
+		BF0EDC1626C12B6E00AAB245 /* MonstersDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersDBService.swift; sourceTree = "<group>"; };
 		BF25DC7F26B968EB006D4F5C /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		BF25DC8726B96F53006D4F5C /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		BF25DC8A26B96FB6006D4F5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -89,6 +109,10 @@
 		BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDBService.swift; sourceTree = "<group>"; };
 		BF77604326BEB44000B3D43E /* DBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBServices.swift; sourceTree = "<group>"; };
 		BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredDBServices.swift; sourceTree = "<group>"; };
+		BF796F4526C149AD00D21999 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		BF796F4926C14F6400D21999 /* LazyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyList.swift; sourceTree = "<group>"; };
+		BF796F4B26C14FCF00D21999 /* LazyListCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyListCache.swift; sourceTree = "<group>"; };
+		BF796F4D26C151D700D21999 /* LazyListIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyListIterator.swift; sourceTree = "<group>"; };
 		BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AncientCowboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF940DF126B7EB2000906BB9 /* AncientCowboyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncientCowboyApp.swift; sourceTree = "<group>"; };
 		BF940DF326B7EB2000906BB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BF25DC9626B98801006D4F5C /* ItemsWebService.swift */,
+				BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -176,6 +201,7 @@
 				BF97543426BFBF63001DC3ED /* CoreData */,
 				BF65B8AA26C1035600241A2A /* Hero.swift */,
 				BF25DC9926B98848006D4F5C /* Item.swift */,
+				BF0EDC1026C12AA200AAB245 /* Monster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,10 +242,12 @@
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BF796F4726C14F4500D21999 /* LazyList */,
 				BF25DC8726B96F53006D4F5C /* APICall.swift */,
 				BFDED2F426B9AB1100B05A5E /* CancelBag.swift */,
 				BF6A78D226B93C42007BA8AF /* Store.swift */,
 				BF25DC9026B975E0006D4F5C /* WebService.swift */,
+				BF796F4526C149AD00D21999 /* Loadable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -228,8 +256,27 @@
 			isa = PBXGroup;
 			children = (
 				BF77604126BEB3AB00B3D43E /* ItemsDBService.swift */,
+				BF0EDC1626C12B6E00AAB245 /* MonstersDBService.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BF796F4726C14F4500D21999 /* LazyList */ = {
+			isa = PBXGroup;
+			children = (
+				BF796F4826C14F4F00D21999 /* Helpers */,
+				BF796F4926C14F6400D21999 /* LazyList.swift */,
+			);
+			path = LazyList;
+			sourceTree = "<group>";
+		};
+		BF796F4826C14F4F00D21999 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF796F4B26C14FCF00D21999 /* LazyListCache.swift */,
+				BF796F4D26C151D700D21999 /* LazyListIterator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BF940DE526B7EB2000906BB9 = {
@@ -278,8 +325,12 @@
 		BF97543426BFBF63001DC3ED /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				BF0EDC0826C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift */,
+				BF0EDC0926C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift */,
 				BF97543526BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift */,
 				BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */,
+				BF0EDC0A26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift */,
+				BF0EDC0B26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -353,6 +404,7 @@
 			children = (
 				BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */,
 				BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */,
+				BF0EDC1226C12AE100AAB245 /* MonstersInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -447,21 +499,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */,
+				BF0EDC1126C12AA200AAB245 /* Monster.swift in Sources */,
 				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
 				BF25DC9726B98801006D4F5C /* ItemsWebService.swift in Sources */,
+				BF0EDC1726C12B6E00AAB245 /* MonstersDBService.swift in Sources */,
+				BF796F4A26C14F6400D21999 /* LazyList.swift in Sources */,
 				BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */,
 				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
 				BFDED30326B9B8AB00B05A5E /* SubscribersCompletionExtension.swift in Sources */,
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
+				BF0EDC0C26C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift in Sources */,
 				BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */,
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
 				BF97543726BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift in Sources */,
 				BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */,
+				BF0EDC1526C12B4A00AAB245 /* MonstersWebService.swift in Sources */,
+				BF0EDC0D26C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift in Sources */,
 				BF65B8AB26C1035600241A2A /* Hero.swift in Sources */,
 				BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */,
+				BF0EDC0E26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift in Sources */,
+				BF796F4626C149AD00D21999 /* Loadable.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
+				BF0EDC0F26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift in Sources */,
 				BF77604426BEB44000B3D43E /* DBServices.swift in Sources */,
 				BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
@@ -470,6 +531,8 @@
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
 				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
+				BF796F4C26C14FCF00D21999 /* LazyListCache.swift in Sources */,
+				BF0EDC1326C12AE100AAB245 /* MonstersInteractor.swift in Sources */,
 				BFDED30726B9B9E300B05A5E /* ManagedEntityExtension.swift in Sources */,
 				BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */,
 				BF25DC9A26B98848006D4F5C /* Item.swift in Sources */,
@@ -488,6 +551,7 @@
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
 				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,
+				BF796F4E26C151D700D21999 /* LazyListIterator.swift in Sources */,
 				BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */,
 				BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
