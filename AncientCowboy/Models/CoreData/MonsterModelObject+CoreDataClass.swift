@@ -9,11 +9,11 @@ import CoreData
     return request
   }
   
-  static func monsters(by ingameids: [Int]) -> NSFetchRequest<MonsterModelObject> {
+  static func monster(by ingameid: Int) -> NSFetchRequest<MonsterModelObject> {
     
     let request = newFetchRequest()
     
-    let predicate = NSPredicate(format: "ANY ingameid IN %@", ingameids)
+    let predicate = NSPredicate(format: "WHERE ingameid IN %@", ingameid)
     
     request.predicate = predicate
     

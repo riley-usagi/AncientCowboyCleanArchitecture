@@ -61,3 +61,23 @@ extension LazyList {
     }
   }
 }
+
+
+// MARK: - Random Access Collection
+
+extension LazyList: RandomAccessCollection {
+
+  typealias Index = Int
+
+  var startIndex: Index { 0 }
+  var endIndex: Index { count }
+
+  subscript(index: Index) -> Iterator.Element {
+
+    do {
+      return try element(at: index)
+    } catch let error {
+      fatalError("\(error)")
+    }
+  }
+}

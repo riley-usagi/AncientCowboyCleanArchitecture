@@ -5,6 +5,7 @@ import CoreData
 protocol MonstersDBService {
   func storeAllMonstersFromWeb(monsters: [Monster]) -> AnyPublisher<Void, Error>
   func store(monstersDetails: Monster) -> AnyPublisher<Monster?, Error>
+  func monster(ingameid: Int) -> AnyPublisher<Monster?, Error>
 }
 
 /// Сервис для работы с Монстрами из CoreData
@@ -24,7 +25,16 @@ struct RealMonstersDBService: MonstersDBService {
       }
   }
   
-  // MARK: - Store
+  func monster(ingameid: Int) -> AnyPublisher<Monster?, Error> {
+    let fetchRequest = MonsterModelObject.monster(by: 1002)
+    
+    return persistentStore
+      .fetch(fetchRequest) { fetchedMonster in
+        Monster(managedObject: fetchedMonster)
+      }
+      .map { $0.first }
+      .eraseToAnyPublisher()
+  }
   
   func store(monstersDetails: Monster) -> AnyPublisher<Monster?, Error> {
     
