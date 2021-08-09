@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */; };
 		BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */; };
 		BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */; };
+		BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */; };
+		BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */; };
+		BF65B8AB26C1035600241A2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8AA26C1035600241A2A /* Hero.swift */; };
+		BF65B8AE26C1045A00241A2A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BF65B8AD26C1045A00241A2A /* FirebaseFirestore */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */; };
@@ -64,6 +68,9 @@
 		BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWebServices.swift; sourceTree = "<group>"; };
 		BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredSession.swift; sourceTree = "<group>"; };
 		BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AncientCowboyDataBase.xcdatamodel; sourceTree = "<group>"; };
+		BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesInteractor.swift; sourceTree = "<group>"; };
+		BF65B8AA26C1035600241A2A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF65B8AE26C1045A00241A2A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BF97543426BFBF63001DC3ED /* CoreData */,
+				BF65B8AA26C1035600241A2A /* Hero.swift */,
 				BF25DC9926B98848006D4F5C /* Item.swift */,
 			);
 			path = Models;
@@ -166,6 +175,14 @@
 				BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		BF65B8A526C101C600241A2A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
@@ -262,6 +279,7 @@
 		BFBC6BC526B7FB350069C51F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF65B8A526C101C600241A2A /* Other */,
 				BF25DC7D26B968DA006D4F5C /* Screens */,
 				BF940DF326B7EB2000906BB9 /* ContentView.swift */,
 			);
@@ -303,6 +321,7 @@
 		BFE72ED826B8181D00008CBC /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */,
 				BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */,
 			);
 			path = Interactors;
@@ -335,6 +354,9 @@
 			dependencies = (
 			);
 			name = AncientCowboy;
+			packageProductDependencies = (
+				BF65B8AD26C1045A00241A2A /* FirebaseFirestore */,
+			);
 			productName = AncientCowboy;
 			productReference = BF940DEE26B7EB2000906BB9 /* AncientCowboy.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +384,9 @@
 				Base,
 			);
 			mainGroup = BF940DE526B7EB2000906BB9;
+			packageReferences = (
+				BF65B8AC26C1045A00241A2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BF940DEF26B7EB2000906BB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,11 +425,14 @@
 				BF25DC9C26B98A26006D4F5C /* WebServices.swift in Sources */,
 				BF97543726BFBF7A001DC3ED /* ItemModelObject+CoreDataClass.swift in Sources */,
 				BFDED2FF26B9B7A800B05A5E /* JustExtension.swift in Sources */,
+				BF65B8AB26C1035600241A2A /* Hero.swift in Sources */,
+				BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
 				BF77604426BEB44000B3D43E /* DBServices.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
+				BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
 				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
@@ -616,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF65B8AC26C1045A00241A2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF65B8AD26C1045A00241A2A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF65B8AC26C1045A00241A2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */ = {

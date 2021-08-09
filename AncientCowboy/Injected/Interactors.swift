@@ -4,12 +4,21 @@ extension Container {
     
     let itemsInteractor: ItemsInteractor
     
+    let heroesInteractor: HeroesInteractor
+    
     static var stub: Self {
-      .init(itemsInteractor: StubItemsInteractor())
+      .init(
+        itemsInteractor: StubItemsInteractor(),
+        heroesInteractor: StubHeroesInteractor()
+      )
     }
     
-    init(itemsInteractor: ItemsInteractor) {
-      self.itemsInteractor = itemsInteractor
+    init(
+      itemsInteractor: ItemsInteractor,
+      heroesInteractor: HeroesInteractor
+    ) {
+      self.itemsInteractor  = itemsInteractor
+      self.heroesInteractor = heroesInteractor
     }
   }
 }

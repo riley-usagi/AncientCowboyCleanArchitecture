@@ -13,6 +13,11 @@ extension AppEnvironment {
       dbService: dbServices.itemsDBService
     )
     
-    return .init(itemsInteractor: itemsInteractor)
+    let heroesInteractor = RealHeroesInteractor(appState: appState)
+    
+    return .init(
+      itemsInteractor: itemsInteractor,
+      heroesInteractor: heroesInteractor
+    )
   }
 }

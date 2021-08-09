@@ -14,7 +14,7 @@ enum RegistrationStatus: String, CaseIterable {
   // MARK: - Параметры
   
   /// Текущий статус регистрации пользователя
-  @State private var registrationStatus: RegistrationStatus = .notRegistered
+  @State private var registrationStatus: RegistrationStatus = .unknown
   
   /// Объект окружения приложения
   let environment: AppEnvironment
@@ -28,7 +28,7 @@ enum RegistrationStatus: String, CaseIterable {
         
         case .unknown:
           AnyView(
-            Text("Unknown")
+            ActivityIndicatorView()
           )
           
         case .notRegistered:
