@@ -11,4 +11,6 @@ struct AppState: Equatable {
       UserDefaults.standard.set(newValue, forKey: "dataPreloaded")
     }
   }
+  
+  var hero: Hero?
 }

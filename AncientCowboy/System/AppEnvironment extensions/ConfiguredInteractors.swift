@@ -3,7 +3,8 @@ extension AppEnvironment {
   static func configuredInteractors(
     appState: Store<AppState>,
     webServices: Container.WebServices,
-    dbServices: Container.DBServices
+    dbServices: Container.DBServices,
+    fbServices: Container.FBServices
   ) -> Container.Interactors {
     
     /// Интерактор для работы с игровыми предметами
@@ -13,7 +14,10 @@ extension AppEnvironment {
       dbService: dbServices.itemsDBService
     )
     
-    let heroesInteractor = RealHeroesInteractor(appState: appState)
+    let heroesInteractor = RealHeroesInteractor(
+      appState: appState,
+      fbService: fbServices.heroesFBService
+    )
     
     return .init(
       itemsInteractor: itemsInteractor,

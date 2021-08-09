@@ -23,6 +23,10 @@
 		BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */; };
 		BF65B8AB26C1035600241A2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8AA26C1035600241A2A /* Hero.swift */; };
 		BF65B8AE26C1045A00241A2A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BF65B8AD26C1045A00241A2A /* FirebaseFirestore */; };
+		BF65B8B026C1061900241A2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF65B8AF26C1061900241A2A /* GoogleService-Info.plist */; };
+		BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B226C110CC00241A2A /* HeroesFBService.swift */; };
+		BF65B8B526C112CC00241A2A /* FBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B426C112CC00241A2A /* FBServices.swift */; };
+		BF65B8B726C1131500241A2A /* ConfiguredFBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */; };
@@ -71,6 +75,10 @@
 		BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesInteractor.swift; sourceTree = "<group>"; };
 		BF65B8AA26C1035600241A2A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		BF65B8AF26C1061900241A2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF65B8B226C110CC00241A2A /* HeroesFBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesFBService.swift; sourceTree = "<group>"; };
+		BF65B8B426C112CC00241A2A /* FBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBServices.swift; sourceTree = "<group>"; };
+		BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredFBServices.swift; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 		BF25DC9426B987F0006D4F5C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF65B8B126C110B700241A2A /* FireBase */,
 				BF77604026BEB39C00B3D43E /* DataBase */,
 				BF25DC9526B987F7006D4F5C /* Web */,
 			);
@@ -183,6 +192,14 @@
 				BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		BF65B8B126C110B700241A2A /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				BF65B8B226C110CC00241A2A /* HeroesFBService.swift */,
+			);
+			path = FireBase;
 			sourceTree = "<group>";
 		};
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
@@ -270,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				BF940DF526B7EB2000906BB9 /* Assets.xcassets */,
+				BF65B8AF26C1061900241A2A /* GoogleService-Info.plist */,
 				BF940DFA26B7EB2000906BB9 /* Info.plist */,
 				BFDED2EC26B9A74400B05A5E /* keys.plist */,
 			);
@@ -294,6 +312,7 @@
 				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
 				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
 				BF77604326BEB44000B3D43E /* DBServices.swift */,
+				BF65B8B426C112CC00241A2A /* FBServices.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -334,6 +353,7 @@
 				BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */,
 				BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */,
 				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
+				BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */,
 			);
 			path = "AppEnvironment extensions";
 			sourceTree = "<group>";
@@ -402,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF940DF926B7EB2000906BB9 /* Preview Assets.xcassets in Resources */,
+				BF65B8B026C1061900241A2A /* GoogleService-Info.plist in Resources */,
 				BF940DF626B7EB2000906BB9 /* Assets.xcassets in Resources */,
 				BFDED2ED26B9A74400B05A5E /* keys.plist in Resources */,
 			);
@@ -431,6 +452,7 @@
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
 				BF77604426BEB44000B3D43E /* DBServices.swift in Sources */,
+				BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
@@ -448,6 +470,7 @@
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
 				BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */,
 				BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */,
+				BF65B8B526C112CC00241A2A /* FBServices.swift in Sources */,
 				BF77604626BEB49200B3D43E /* ConfiguredDBServices.swift in Sources */,
 				BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */,
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
@@ -456,6 +479,7 @@
 				BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */,
 				BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
+				BF65B8B726C1131500241A2A /* ConfiguredFBServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

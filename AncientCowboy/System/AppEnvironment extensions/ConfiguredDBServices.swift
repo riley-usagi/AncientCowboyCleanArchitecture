@@ -1,6 +1,6 @@
 extension AppEnvironment {
   
-  static func configuredDBSservices() -> Container.DBServices {
+  static func configuredDBServices() -> Container.DBServices {
     
     let persistentStore = CoreDataStack()
     

@@ -20,13 +20,16 @@ extension AppEnvironment {
     
     let webServices = configuredWebServices(session: session)
     
-    let dbServices  = configuredDBSservices()
+    let dbServices  = configuredDBServices()
+    
+    let fbServices  = configuredFBServices()
     
     /// Список настроенных интеракторов
     let interactors = configuredInteractors(
       appState: appState,
       webServices: webServices,
-      dbServices: dbServices
+      dbServices: dbServices,
+      fbServices: fbServices
     )
     
     /// Контейнер с зависимостями

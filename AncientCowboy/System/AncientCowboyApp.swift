@@ -1,3 +1,4 @@
+import Firebase
 import SwiftUI
 
 /// Статус регистрации пользователя
@@ -27,9 +28,7 @@ enum RegistrationStatus: String, CaseIterable {
         switch registrationStatus {
         
         case .unknown:
-          AnyView(
-            ActivityIndicatorView()
-          )
+          AnyView(ActivityIndicatorView())
           
         case .notRegistered:
           AnyView(
@@ -42,7 +41,17 @@ enum RegistrationStatus: String, CaseIterable {
         }
       }
       .onAppear {
-        print("Trying load hero from FireBase")
+        environment.container.interactors.heroesInteractor.loadHeroFromFireStore { loadingHeroResultAsBool in
+          
+          switch loadingHeroResultAsBool {
+          
+          case .success:
+            registrationStatus = .alreadyRegistered
+          case .failure:
+            registrationStatus = .notRegistered
+          }
+          
+        }
       }
     }
   }
@@ -50,6 +59,9 @@ enum RegistrationStatus: String, CaseIterable {
   
   // MARK: - Инициализаторы
   init() {
+    
+    FirebaseApp.configure()
+    
     environment = AppEnvironment.bootstrap()
   }
 }
