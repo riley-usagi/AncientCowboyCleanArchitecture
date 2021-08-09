@@ -71,6 +71,7 @@
 		BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */; };
 		BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDB26B818EC00008CBC /* Interactors.swift */; };
 		BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */; };
+		BFF64ECE26C190F1002A1FE9 /* ImagesWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF64ECD26C190F1002A1FE9 /* ImagesWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,7 @@
 		BFE72ED926B8182E00008CBC /* ItemsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsInteractor.swift; sourceTree = "<group>"; };
 		BFE72EDB26B818EC00008CBC /* Interactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactors.swift; sourceTree = "<group>"; };
 		BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredInteractors.swift; sourceTree = "<group>"; };
+		BFF64ECD26C190F1002A1FE9 /* ImagesWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				BF25DC9626B98801006D4F5C /* ItemsWebService.swift */,
 				BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */,
+				BFF64ECD26C190F1002A1FE9 /* ImagesWebService.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
+				BFF64ECE26C190F1002A1FE9 /* ImagesWebService.swift in Sources */,
 				BF77603D26BEAEB000B3D43E /* NSManagedObjectContextExtension.swift in Sources */,
 				BFDED2FB26B9AC3700B05A5E /* ProcessInfoExtension.swift in Sources */,
 				BF65B8B526C112CC00241A2A /* FBServices.swift in Sources */,

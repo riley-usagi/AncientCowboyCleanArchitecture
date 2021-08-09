@@ -29,7 +29,7 @@ struct RealMonstersInteractor: MonstersInteractor {
     enemy.wrappedValue.setIsLoading(cancelBag: cancelBag)
     
     dbService
-      .monster(ingameid: [1002, 1097, 1079, 1183, 1901].randomElement()!)
+      .monster(ingameid: [1002, 1113, 1079, 1183, 1009].randomElement()!)
     
       .sinkToLoadable { optionalLoadableMonster in
         enemy.wrappedValue = optionalLoadableMonster.unwrap()

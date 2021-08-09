@@ -6,12 +6,16 @@ extension Container {
     
     let monstersWebService: MonstersWebService
     
+    let imagesWebService: ImagesWebService
+    
     init(
       itemsWebService: ItemsWebService,
-      monstersWebService: MonstersWebService
+      monstersWebService: MonstersWebService,
+      imagesWebService: ImagesWebService
     ) {
       self.itemsWebService    = itemsWebService
       self.monstersWebService = monstersWebService
+      self.imagesWebService   = imagesWebService
     }
   }
 }
