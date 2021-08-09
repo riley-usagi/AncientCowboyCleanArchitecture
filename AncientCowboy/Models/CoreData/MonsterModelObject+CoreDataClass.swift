@@ -13,7 +13,7 @@ import CoreData
     
     let request = newFetchRequest()
     
-    let predicate = NSPredicate(format: "WHERE ingameid IN %@", ingameid)
+    let predicate = NSPredicate(format: "ingameid == %@", String(ingameid))
     
     request.predicate = predicate
     

@@ -15,6 +15,7 @@
 		BF0EDC1326C12AE100AAB245 /* MonstersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1226C12AE100AAB245 /* MonstersInteractor.swift */; };
 		BF0EDC1526C12B4A00AAB245 /* MonstersWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */; };
 		BF0EDC1726C12B6E00AAB245 /* MonstersDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC1626C12B6E00AAB245 /* MonstersDBService.swift */; };
+		BF19F8F626C15F6700A18D86 /* FightScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF19F8F526C15F6700A18D86 /* FightScreen.swift */; };
 		BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC7F26B968EB006D4F5C /* RegistrationScreen.swift */; };
 		BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8726B96F53006D4F5C /* APICall.swift */; };
 		BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC8A26B96FB6006D4F5C /* APIError.swift */; };
@@ -81,6 +82,7 @@
 		BF0EDC1226C12AE100AAB245 /* MonstersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersInteractor.swift; sourceTree = "<group>"; };
 		BF0EDC1426C12B4A00AAB245 /* MonstersWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersWebService.swift; sourceTree = "<group>"; };
 		BF0EDC1626C12B6E00AAB245 /* MonstersDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersDBService.swift; sourceTree = "<group>"; };
+		BF19F8F526C15F6700A18D86 /* FightScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightScreen.swift; sourceTree = "<group>"; };
 		BF25DC7F26B968EB006D4F5C /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		BF25DC8726B96F53006D4F5C /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		BF25DC8A26B96FB6006D4F5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -151,9 +153,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF19F8F426C15F5900A18D86 /* FightScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BF19F8F526C15F6700A18D86 /* FightScreen.swift */,
+			);
+			path = FightScreen;
+			sourceTree = "<group>";
+		};
 		BF25DC7D26B968DA006D4F5C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BF19F8F426C15F5900A18D86 /* FightScreen */,
 				BF25DC7E26B968DE006D4F5C /* Registration */,
 			);
 			path = Screens;
@@ -540,6 +551,7 @@
 				BFE72EDA26B8182E00008CBC /* ItemsInteractor.swift in Sources */,
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF97543826BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift in Sources */,
+				BF19F8F626C15F6700A18D86 /* FightScreen.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,

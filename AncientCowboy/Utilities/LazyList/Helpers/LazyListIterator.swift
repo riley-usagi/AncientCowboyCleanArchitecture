@@ -32,5 +32,5 @@ extension LazyList: Sequence {
     .init(list: self)
   }
   
-  var understimatedCont: Int { count }
+  var underestimatedCount: Int { count }
 }

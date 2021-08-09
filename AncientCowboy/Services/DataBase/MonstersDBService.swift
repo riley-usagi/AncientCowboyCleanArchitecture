@@ -26,7 +26,7 @@ struct RealMonstersDBService: MonstersDBService {
   }
   
   func monster(ingameid: Int) -> AnyPublisher<Monster?, Error> {
-    let fetchRequest = MonsterModelObject.monster(by: 1002)
+    let fetchRequest = MonsterModelObject.monster(by: ingameid)
     
     return persistentStore
       .fetch(fetchRequest) { fetchedMonster in

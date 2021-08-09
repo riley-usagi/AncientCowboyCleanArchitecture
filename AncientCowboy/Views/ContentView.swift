@@ -9,12 +9,8 @@ struct ContentView: View {
   private let container: Container
   
   var body: some View {
-    VStack {
-      Text("Hero name:" + container.appState.value.hero!.name)
-        .font(.largeTitle)
-        .padding()
-      Text("Fight Screen will be here")
-    }
+    FightScreen()
+      .inject(container)
   }
   
   
