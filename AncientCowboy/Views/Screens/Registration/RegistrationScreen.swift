@@ -5,6 +5,8 @@ struct RegistrationScreen: View {
   
   @Environment(\.container) var container: Container
   
+  @Binding var registrationStatus: RegistrationStatus
+  
   @State private var dataPreloaded: Bool = false
   
   @State var gender = "male"
@@ -99,7 +101,23 @@ struct RegistrationScreen: View {
       
       Button(
         action: {
-          
+          if dataPreloaded {
+            container.interactors.heroesInteractor.createHero(
+              Hero(
+                name: name,
+                str: stats["STR"]!, agi: stats["AGI"]!, vit: stats["VIT"]!,
+                int: stats["INT"]!, dex: stats["DEX"]!, luk: stats["LUK"]!
+              )
+            ) { heroCreatingResultAsBool in
+              switch heroCreatingResultAsBool {
+              
+              case .success(_):
+                registrationStatus = .alreadyRegistered
+              case let .failure(error):
+                print("Registration error: \(String(describing: error))")
+              }
+            }
+          }
         }, label: {
           if !dataPreloaded {
             HStack(spacing: 15) {

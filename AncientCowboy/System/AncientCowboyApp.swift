@@ -32,7 +32,7 @@ enum RegistrationStatus: String, CaseIterable {
           
         case .notRegistered:
           AnyView(
-            RegistrationScreen()
+            RegistrationScreen(registrationStatus: $registrationStatus)
               .inject(environment.container)
           )
           

@@ -4,6 +4,7 @@ import SwiftUI
 
 protocol HeroesFBService {
   func loadHeroFromServer(deviceID: String) -> AnyPublisher<Hero?, Error>
+  func createHeroInFireStore(_ heroFromForm: Hero, deviceID: String) -> AnyPublisher<Bool, Error>
 }
 
 struct RealHeroesFBService: HeroesFBService {
@@ -40,6 +41,34 @@ struct RealHeroesFBService: HeroesFBService {
       
     }.eraseToAnyPublisher()
     
+  }
+  
+  func createHeroInFireStore(_ heroFromForm: Hero, deviceID: String) -> AnyPublisher<Bool, Error> {
+    
+    return Future<Bool, Error> { promise in
+      
+      let fireStoreCollection = Firestore.firestore().collection("heroes")
+      
+      fireStoreCollection.document(deviceID).setData(
+        [
+          "name": heroFromForm.name,
+          "str": heroFromForm.str,
+          "agi": heroFromForm.agi,
+          "vit": heroFromForm.vit,
+          "int": heroFromForm.int,
+          "dex": heroFromForm.dex,
+          "luk": heroFromForm.luk,
+          "zeny": heroFromForm.zeny
+        ]
+      ) { error in
+        if error != nil {
+          promise(.failure(FireBaseError.heroCreatingError))
+        } else {
+          promise(.success(true))
+        }
+      }
+      
+    }.eraseToAnyPublisher()
   }
 }
 

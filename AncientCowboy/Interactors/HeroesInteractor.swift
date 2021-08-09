@@ -3,6 +3,7 @@ import SwiftUI
 
 protocol HeroesInteractor {
   func loadHeroFromFireStore(completion: @escaping (Result<Bool, Error>) -> Void)
+  func createHero(_ heroFromForm: Hero, completion: @escaping (Result<Bool, Error>) -> Void)
 }
 
 struct RealHeroesInteractor: HeroesInteractor {
@@ -40,8 +41,28 @@ struct RealHeroesInteractor: HeroesInteractor {
       .store(in: cancelBag)
     
   }
+  
+  func createHero(_ heroFromForm: Hero, completion: @escaping (Result<Bool, Error>) -> Void) {
+    
+    fbService
+      .createHeroInFireStore(heroFromForm, deviceID: deviceID)
+      .sinkToResult { heroCreatingResultAsBool in
+        switch heroCreatingResultAsBool {
+        
+        case .success:
+          appState.value.hero = heroFromForm
+          
+          completion(.success(true))
+        case let .failure(error):
+          completion(.failure(error))
+        }
+      }
+      .store(in: cancelBag)
+    
+  }
 }
 
 struct StubHeroesInteractor: HeroesInteractor {
   func loadHeroFromFireStore(completion: @escaping (Result<Bool, Error>) -> Void) {}
+  func createHero(_ heroFromForm: Hero, completion: @escaping (Result<Bool, Error>) -> Void) {}
 }
