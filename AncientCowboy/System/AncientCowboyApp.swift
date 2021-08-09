@@ -50,7 +50,6 @@ enum RegistrationStatus: String, CaseIterable {
           case .failure:
             registrationStatus = .notRegistered
           }
-          
         }
       }
     }

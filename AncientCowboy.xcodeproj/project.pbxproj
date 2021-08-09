@@ -27,6 +27,7 @@
 		BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B226C110CC00241A2A /* HeroesFBService.swift */; };
 		BF65B8B526C112CC00241A2A /* FBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B426C112CC00241A2A /* FBServices.swift */; };
 		BF65B8B726C1131500241A2A /* ConfiguredFBServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */; };
+		BF65B8BA26C119B700241A2A /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8B926C119B700241A2A /* StatsView.swift */; };
 		BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78CF26B93C0F007BA8AF /* AppState.swift */; };
 		BF6A78D326B93C42007BA8AF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A78D226B93C42007BA8AF /* Store.swift */; };
 		BF77603B26BEAE9600B3D43E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */; };
@@ -79,6 +80,7 @@
 		BF65B8B226C110CC00241A2A /* HeroesFBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesFBService.swift; sourceTree = "<group>"; };
 		BF65B8B426C112CC00241A2A /* FBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBServices.swift; sourceTree = "<group>"; };
 		BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredFBServices.swift; sourceTree = "<group>"; };
+		BF65B8B926C119B700241A2A /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		BF6A78CF26B93C0F007BA8AF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		BF6A78D226B93C42007BA8AF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BF77603A26BEAE9600B3D43E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		BF25DC7E26B968DE006D4F5C /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				BF65B8B826C119AF00241A2A /* Components */,
 				BF25DC7F26B968EB006D4F5C /* RegistrationScreen.swift */,
 			);
 			path = Registration;
@@ -200,6 +203,14 @@
 				BF65B8B226C110CC00241A2A /* HeroesFBService.swift */,
 			);
 			path = FireBase;
+			sourceTree = "<group>";
+		};
+		BF65B8B826C119AF00241A2A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BF65B8B926C119B700241A2A /* StatsView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		BF6A78D126B93C34007BA8AF /* Utilities */ = {
@@ -455,6 +466,7 @@
 				BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */,
 				BF6A78D326B93C42007BA8AF /* Store.swift in Sources */,
 				BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */,
+				BF65B8BA26C119B700241A2A /* StatsView.swift in Sources */,
 				BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */,
 				BF25DC8026B968EB006D4F5C /* RegistrationScreen.swift in Sources */,
 				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
