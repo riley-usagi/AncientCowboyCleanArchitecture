@@ -51,7 +51,7 @@ struct Monster: Identifiable, Equatable, Codable {
   var drop9per: Int
   var dropCardPer: Int
   
-  var image: UIImage?
+  var image: UIImage = UIImage(systemName: "leaf.fill")!
   
   static let monstersByLocation: [String: [Int]] = [
     "prt_fild08": [1063, 1002, 1113, 1007]

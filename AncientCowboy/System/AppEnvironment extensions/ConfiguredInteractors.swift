@@ -4,7 +4,8 @@ extension AppEnvironment {
     appState: Store<AppState>,
     webServices: Container.WebServices,
     dbServices: Container.DBServices,
-    fbServices: Container.FBServices
+    fbServices: Container.FBServices,
+    storageServices: Container.StorageServices
   ) -> Container.Interactors {
     
     /// Интерактор для работы с игровыми предметами
@@ -22,7 +23,9 @@ extension AppEnvironment {
     let monstersInteractor = RealMonstersInteractor(
       appState: appState,
       dbService: dbServices.monstersDBService,
-      webService: webServices.monstersWebService
+      webService: webServices.monstersWebService,
+      imagesStorageService: storageServices.imagesStorageService,
+      imagesWebService: webServices.imagesWebService
     )
     
     return .init(

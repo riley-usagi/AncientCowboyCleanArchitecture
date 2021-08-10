@@ -57,6 +57,9 @@
 		BF97543826BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */; };
 		BFBC6BCD26B802D20069C51F /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCC26B802D20069C51F /* Container.swift */; };
 		BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */; };
+		BFBDE70426C2542A00249688 /* ImagesStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDE70326C2542A00249688 /* ImagesStorageService.swift */; };
+		BFBDE70626C2545600249688 /* StorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDE70526C2545600249688 /* StorageServices.swift */; };
+		BFBDE70826C254A000249688 /* ConfiguredStorageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBDE70726C254A000249688 /* ConfiguredStorageServices.swift */; };
 		BFDED2ED26B9A74400B05A5E /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFDED2EC26B9A74400B05A5E /* keys.plist */; };
 		BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F426B9AB1100B05A5E /* CancelBag.swift */; };
 		BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */; };
@@ -126,6 +129,9 @@
 		BF97543626BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemModelObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFBC6BCC26B802D20069C51F /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		BFBC6BCE26B802F10069C51F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		BFBDE70326C2542A00249688 /* ImagesStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesStorageService.swift; sourceTree = "<group>"; };
+		BFBDE70526C2545600249688 /* StorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServices.swift; sourceTree = "<group>"; };
+		BFBDE70726C254A000249688 /* ConfiguredStorageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredStorageServices.swift; sourceTree = "<group>"; };
 		BFDED2EC26B9A74400B05A5E /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		BFDED2F426B9AB1100B05A5E /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		BFDED2F626B9AB6900B05A5E /* AnyCancellableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCancellableExtension.swift; sourceTree = "<group>"; };
@@ -192,8 +198,9 @@
 		BF25DC9426B987F0006D4F5C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				BF65B8B126C110B700241A2A /* FireBase */,
 				BF77604026BEB39C00B3D43E /* DataBase */,
+				BF65B8B126C110B700241A2A /* FireBase */,
+				BFBDE70226C2542200249688 /* Storage */,
 				BF25DC9526B987F7006D4F5C /* Web */,
 			);
 			path = Services;
@@ -389,8 +396,17 @@
 				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
 				BF77604326BEB44000B3D43E /* DBServices.swift */,
 				BF65B8B426C112CC00241A2A /* FBServices.swift */,
+				BFBDE70526C2545600249688 /* StorageServices.swift */,
 			);
 			path = Injected;
+			sourceTree = "<group>";
+		};
+		BFBDE70226C2542200249688 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BFBDE70326C2542A00249688 /* ImagesStorageService.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		BFE72ED526B8133500008CBC /* Extensions */ = {
@@ -431,6 +447,7 @@
 				BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */,
 				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
 				BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */,
+				BFBDE70726C254A000249688 /* ConfiguredStorageServices.swift */,
 			);
 			path = "AppEnvironment extensions";
 			sourceTree = "<group>";
@@ -519,6 +536,7 @@
 				BF0EDC1726C12B6E00AAB245 /* MonstersDBService.swift in Sources */,
 				BF796F4A26C14F6400D21999 /* LazyList.swift in Sources */,
 				BF25DC8826B96F53006D4F5C /* APICall.swift in Sources */,
+				BFBDE70426C2542A00249688 /* ImagesStorageService.swift in Sources */,
 				BFE72EDF26B81A3700008CBC /* ConfiguredInteractors.swift in Sources */,
 				BFDED30326B9B8AB00B05A5E /* SubscribersCompletionExtension.swift in Sources */,
 				BF6A78D026B93C0F007BA8AF /* AppState.swift in Sources */,
@@ -530,12 +548,14 @@
 				BF0EDC1526C12B4A00AAB245 /* MonstersWebService.swift in Sources */,
 				BF0EDC0D26C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift in Sources */,
 				BF65B8AB26C1035600241A2A /* Hero.swift in Sources */,
+				BFBDE70826C254A000249688 /* ConfiguredStorageServices.swift in Sources */,
 				BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */,
 				BF0EDC0E26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift in Sources */,
 				BF796F4626C149AD00D21999 /* Loadable.swift in Sources */,
 				BFBC6BCD26B802D20069C51F /* Container.swift in Sources */,
 				BFDED2F526B9AB1100B05A5E /* CancelBag.swift in Sources */,
 				BF25DC8D26B970D0006D4F5C /* HTTPCodesExtension.swift in Sources */,
+				BFBDE70626C2545600249688 /* StorageServices.swift in Sources */,
 				BF0EDC0F26C12A3700AAB245 /* MonsterModelObject+CoreDataProperties.swift in Sources */,
 				BF77604426BEB44000B3D43E /* DBServices.swift in Sources */,
 				BF65B8B326C110CC00241A2A /* HeroesFBService.swift in Sources */,

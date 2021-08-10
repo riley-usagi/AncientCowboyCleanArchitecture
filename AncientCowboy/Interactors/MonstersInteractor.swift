@@ -24,15 +24,40 @@ struct RealMonstersInteractor: MonstersInteractor {
   
   let webService: MonstersWebService
   
+  let imagesStorageService: ImagesStorageService
+  
+  let imagesWebService: ImagesWebService
+  
   func reloadEnemy(_ enemy: LoadableSubject<Monster>) {
     
     enemy.wrappedValue.setIsLoading(cancelBag: cancelBag)
     
-    dbService
-      .monster(ingameid: [1002, 1113, 1079, 1183, 1009].randomElement()!)
+    let randomMonsterId: Int = [1002, 1113, 1079, 1183, 1009].randomElement()!
     
-      .sinkToLoadable { optionalLoadableMonster in
-        enemy.wrappedValue = optionalLoadableMonster.unwrap()
+    
+    imagesStorageService
+      .load(theme: .monsters, id: randomMonsterId)
+      .flatMap { optionalImage -> AnyPublisher<UIImage, Error> in
+        return imagesWebService.loadMonsterImage(ingameid: randomMonsterId)
+      }
+      .flatMap { image -> AnyPublisher<UIImage, Error> in
+        imagesStorageService.save(image: image, id: randomMonsterId, theme: .monsters)
+      }
+      .zip(dbService.monster(ingameid: randomMonsterId))
+      .flatMap { (image, optionalMonster) -> AnyPublisher<Monster?, Error> in
+        
+        if var monster = optionalMonster {
+          
+          monster.image = image
+          
+          return Just<Monster?>.withErrorType(monster, Error.self)
+        } else {
+          return Just<Monster?>.withErrorType(nil, Error.self)
+        }
+        
+      }
+      .sinkToLoadable { optionalMonster in
+        enemy.wrappedValue = optionalMonster.unwrap()
       }
       .store(in: cancelBag)
   }

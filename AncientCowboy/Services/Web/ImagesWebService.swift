@@ -2,7 +2,7 @@ import Combine
 import UIKit
 
 protocol ImagesWebService: WebService {
-  func load(imageURLString: String) -> AnyPublisher<UIImage, Error>
+  func loadMonsterImage(ingameid: Int) -> AnyPublisher<UIImage, Error>
 }
 
 struct RealImagesWebService: ImagesWebService {
@@ -16,8 +16,9 @@ struct RealImagesWebService: ImagesWebService {
     self.baseURL = baseURL
   }
   
-  func load(imageURLString: String) -> AnyPublisher<UIImage, Error> {
-    let completeURL = URL(string: baseURL + imageURLString)!
+  func loadMonsterImage(ingameid: Int) -> AnyPublisher<UIImage, Error> {
+    
+    let completeURL = URL(string: baseURL + "/mobs/" + String(ingameid) + ".gif")!
     
     let request = URLRequest(url: completeURL)
     

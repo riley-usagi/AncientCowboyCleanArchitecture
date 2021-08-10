@@ -24,12 +24,15 @@ extension AppEnvironment {
     
     let fbServices  = configuredFBServices()
     
+    let storageServices = configuredStorageServices()
+    
     /// Список настроенных интеракторов
     let interactors = configuredInteractors(
       appState: appState,
       webServices: webServices,
       dbServices: dbServices,
-      fbServices: fbServices
+      fbServices: fbServices,
+      storageServices: storageServices
     )
     
     /// Контейнер с зависимостями

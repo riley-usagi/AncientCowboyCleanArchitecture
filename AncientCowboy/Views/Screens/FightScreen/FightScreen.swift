@@ -53,6 +53,9 @@ extension FightScreen {
 extension FightScreen {
   private func loadedView(_ enemy: Monster) -> some View {
     VStack {
+      
+      Image(uiImage: enemy.image)
+      
       Text("\(enemy.name)")
         .font(.largeTitle)
       
