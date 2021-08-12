@@ -1,21 +1,38 @@
 import Combine
 import SwiftUI
 
+/// Интерактор для работы с Инвентарём героя
 protocol InventoryInteractor {
+  
+  /// Процесс сбора выпавших с Монстра предметов и сохранение их в Инвентарь
+  /// - Parameter monster: Объект убитого Монстра
   func collectLootedItems(from monster: Monster)
+  
+  
+  /// Процесс загрузки списка предметов из Инвентаря
+  /// - Parameter items: Список предметов Инвентаря
   func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>)
+  
+  
+  /// Процесс продажи предметов
+  /// - Parameter ingameid: Внутренний id предмета
   func soldItem(ingameid: Int)
 }
 
+/// Интерактор для работы с Инвентарём героя
 struct RealInventoryInteractor: InventoryInteractor {
-
+  
+  /// Сервис для работы с Инвентарём из локальной базы данных
   let inventoryDBService: InventoryDBService
-
+  
+  /// Сервис для работы с игровыми Предметами из локальной базы данных
   let itemsDBService: ItemsDBService
 
-  func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>) {
+  /// Мешок для подписок
+  let cancelBag = CancelBag()
 
-    let cancelBag = CancelBag()
+  func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>) {
+    
 
     items.wrappedValue.setIsLoading(cancelBag: cancelBag)
 
@@ -31,7 +48,8 @@ struct RealInventoryInteractor: InventoryInteractor {
   }
 
   func collectLootedItems(from monster: Monster) {
-
+    
+    /// Мешок для подписок
     let cancelBag = CancelBag()
 
     for itemID in dropCalculating(by: monster) {
@@ -55,13 +73,12 @@ struct RealInventoryInteractor: InventoryInteractor {
   }
 }
 
-struct StubInventoryInteractor: InventoryInteractor {
-  func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>) {}
-  func collectLootedItems(from monster: Monster) {}
-  func soldItem(ingameid: Int) {}
-}
 
 extension RealInventoryInteractor {
+  
+  /// Расчёт доропа вещей с текущего Монстра
+  /// - Parameter monster: Выбранный Монстр
+  /// - Returns: Список игровых Предметов, которые упали с выбранного Монстра
   func dropCalculating(by monster: Monster) -> [Int] {
 
     var collectedItemsIds: [Int] = []
@@ -110,4 +127,12 @@ extension RealInventoryInteractor {
 
     return collectedItemsIds
   }
+}
+
+
+// MARK: - Stub
+struct StubInventoryInteractor: InventoryInteractor {
+  func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>) {}
+  func collectLootedItems(from monster: Monster) {}
+  func soldItem(ingameid: Int) {}
 }

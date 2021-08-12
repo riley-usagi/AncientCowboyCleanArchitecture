@@ -3,8 +3,10 @@ import SwiftUI
 
 struct FightScreen: View {
   
+  /// Контейнер с зависимостями
   @Environment(\.container) var container: Container
   
+  /// Загружаемый объект монстра
   @State private var enemy: Loadable<Monster>
   
   @State var heroAttackTimer = Timer.publish(every: 0.1, on: .main, in: .common)
@@ -21,6 +23,7 @@ struct FightScreen: View {
 
 extension FightScreen {
   
+  /// Основной контент экрана в зависимости от статуса загружаемого объекта
   private var content: some View {
     
     switch enemy {
@@ -41,6 +44,8 @@ extension FightScreen {
 // MARK: - Not requested
 
 extension FightScreen {
+  
+  /// Экран не загружен
   private var notRequestedView: some View {
     Text("")
       .onAppear {
@@ -51,6 +56,10 @@ extension FightScreen {
 
 
 extension FightScreen {
+  
+  /// Экран загружен
+  /// - Parameter enemy: Объект монстра (врага)
+  /// - Returns: Объект Экрана
   private func loadedView(_ enemy: Monster) -> some View {
     VStack {
       
@@ -79,10 +88,8 @@ extension FightScreen {
         
         self.heroAttackTimer = Timer.publish(every: 0.1, on: .main, in: .common)
         
-        _ = self.heroAttackTimer.connect()
-        
+        _ = self.heroAttackTimer.connect() 
       }
-      
     }
   }
 }

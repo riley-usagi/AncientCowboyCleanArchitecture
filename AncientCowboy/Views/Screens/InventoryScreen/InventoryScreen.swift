@@ -2,11 +2,14 @@ import Combine
 import SwiftUI
 
 struct InventoryScreen: View {
-
+  
+  /// Контейнер с зависимостями
   @Environment(\.container) var container: Container
-
+  
+  /// Текущий выбранный тип предмета в TabView
   @State var currentItemsTypeSelected = "Item"
-
+  
+  /// Загружаемый объект - список вещей из Инвентаря
   @State private var items: Loadable<LazyList<InventoryItem>>
 
   @GestureState var isDragged: Bool = false
@@ -22,6 +25,7 @@ struct InventoryScreen: View {
 
 extension InventoryScreen {
 
+  /// Основной контент экрана в зависимости от статуса загружаемого объекта
   private var content: some View {
 
     switch items {
@@ -40,6 +44,8 @@ extension InventoryScreen {
 }
 
 extension InventoryScreen {
+  
+  /// Экран не загружен
   var notRequested: some View {
     Text("")
       .onAppear {
@@ -50,6 +56,10 @@ extension InventoryScreen {
 }
 
 extension InventoryScreen {
+  
+  /// Экран загружен
+  /// - Parameter items: Список предметов инвентаря
+  /// - Returns: Экран с загруженными данными
   func loadedView(_ items: LazyList<InventoryItem>) -> some View {
 
     ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
@@ -84,7 +94,7 @@ extension InventoryScreen {
 
         InventoryTabBarButton(title: "", image: "gear", currentItemsTypeSelected: $currentItemsTypeSelected)
       }
-//      .padding(.vertical, 12)
+      .padding(.vertical, 12)
       .padding(.horizontal)
       .background(Color(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)))
       .clipShape(Capsule())

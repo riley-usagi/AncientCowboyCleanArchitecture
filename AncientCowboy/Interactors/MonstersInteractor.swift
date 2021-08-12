@@ -10,6 +10,8 @@ protocol MonstersInteractor {
 
 
 struct RealMonstersInteractor: MonstersInteractor {
+  
+  /// Мешок для подписок
   let cancelBag = CancelBag()
   
   /// Технический параметр определяющий задержку в запросе к серверам
@@ -17,15 +19,19 @@ struct RealMonstersInteractor: MonstersInteractor {
     return ProcessInfo.processInfo.isRunningTests ? 0 : 0.5
   }
   
+  /// Объект динамического хранилища
   let appState: Store<AppState>
   
   /// Сервис для работы с Монстрами из CoreData
   let dbService: MonstersDBService
   
+  /// Web-сервис для работы с Монстрами на удалённом сервере
   let webService: MonstersWebService
   
+  /// Сервис для работы с лкальными изобаржениями
   let imagesStorageService: ImagesStorageService
   
+  /// Сервис для работа с изображениями на удалённом сервере
   let imagesWebService: ImagesWebService
   
   func reloadEnemy(_ enemy: LoadableSubject<Monster>) {

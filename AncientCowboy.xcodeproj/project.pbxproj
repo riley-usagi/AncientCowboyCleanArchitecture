@@ -483,11 +483,11 @@
 			isa = PBXGroup;
 			children = (
 				BF77604526BEB49200B3D43E /* ConfiguredDBServices.swift */,
+				BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */,
 				BFE72EDE26B81A3700008CBC /* ConfiguredInteractors.swift */,
 				BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */,
-				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
-				BF65B8B626C1131500241A2A /* ConfiguredFBServices.swift */,
 				BFBDE70726C254A000249688 /* ConfiguredStorageServices.swift */,
+				BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */,
 			);
 			path = "AppEnvironment extensions";
 			sourceTree = "<group>";

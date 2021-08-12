@@ -1,12 +1,23 @@
 import Combine
 import CoreData
 
+/// Сервис для работы с локальным хранилищем в плане игрового инвентаря
 protocol InventoryDBService {
+  
+  /// Загрузка игровых предметов инвентаря игрока
   func loadInventoryItems() -> AnyPublisher<LazyList<InventoryItem>, Error>
+  
+  /// Процесс сохранения предмета в Инвентарь игрока
+  /// - Parameters:
+  ///   - id: id - предмета
+  ///   - itemType: Тип предмета
   func saveItemToInventory(by id: Int, itemType: Int)
 }
 
+/// Сервис для работы с локальным хранилищем в плане игрового инвентаря
 struct RealInventoryDBService: InventoryDBService {
+  
+  /// Объект точки доступа к локальной базе данных
   let persistentStore: PersistentStore
   
   func loadInventoryItems() -> AnyPublisher<LazyList<InventoryItem>, Error> {

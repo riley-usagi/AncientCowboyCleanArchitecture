@@ -1,6 +1,8 @@
 import Foundation
 
 extension LazyList: Sequence {
+  
+  /// Инструмент для безопасного перебора ленивого списка
   struct Iterator: IteratorProtocol {
     
     typealias Element = T

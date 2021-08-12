@@ -3,6 +3,7 @@ import CoreData
 
 extension NSManagedObjectContext {
   
+  /// Адаптация Контекста только на чтение
   func configureAsReadOnlyContext() {
     automaticallyMergesChangesFromParent  = true
     mergePolicy                           = NSRollbackMergePolicy
@@ -10,6 +11,7 @@ extension NSManagedObjectContext {
     shouldDeleteInaccessibleFaults        = false
   }
 
+  /// Адаптация Контекста на обновление данных
   func configureAsUpdateContext() {
     mergePolicy = NSOverwriteMergePolicy
     undoManager = nil

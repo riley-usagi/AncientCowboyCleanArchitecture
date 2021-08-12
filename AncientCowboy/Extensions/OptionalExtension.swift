@@ -7,6 +7,10 @@ protocol SomeOptional {
 }
 
 extension Optional: SomeOptional {
+  
+  /// Извлечение опционального типа
+  /// - Throws: Возможная ошибка
+  /// - Returns: Развёрнутое значение
   func unwrap() throws -> Wrapped {
     
     switch self {
@@ -21,6 +25,7 @@ extension Optional: SomeOptional {
 
 struct ValueIsMissing: Error {
   
+  /// Ошибка отсутствия данных
   var localizedMissingDescription: String {
     NSLocalizedString("Data is missing", comment: "")
   }

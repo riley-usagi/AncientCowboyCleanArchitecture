@@ -10,7 +10,7 @@ enum RegistrationStatus: String, CaseIterable {
 
 /// Точка входа в приложение
 @main struct AncientCowboyApp: App {
-  
+
   
   // MARK: - Параметры
   
@@ -23,6 +23,7 @@ enum RegistrationStatus: String, CaseIterable {
   var body: some Scene {
     WindowGroup {
       
+      // Группа, определяющая экран, в зависимости от статуса регистрации
       Group {
         
         switch registrationStatus {
@@ -40,6 +41,8 @@ enum RegistrationStatus: String, CaseIterable {
           AnyView(ContentView(container: environment.container))
         }
       }
+      
+      // Проверяется статус регистрации
       .onAppear {
         environment.container.interactors.heroesInteractor.loadHeroFromFireStore { loadingHeroResultAsBool in
           
@@ -57,10 +60,14 @@ enum RegistrationStatus: String, CaseIterable {
   
   
   // MARK: - Инициализаторы
+  
   init() {
     
+    // Первоначальная настройка FireBase
     FirebaseApp.configure()
     
+    // Заполняем параметр environment
+    // настроенным объектом Окружения с контейнером
     environment = AppEnvironment.bootstrap()
   }
 }

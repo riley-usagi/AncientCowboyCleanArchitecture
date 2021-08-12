@@ -9,14 +9,17 @@ struct ContentView: View {
   /// Контейнер с зависимостями
   private let container: Container
   
+  /// Текущая страница
   @State var currentPage: Container.Routes = .fight
   
   var body: some View {
     
     HStack(spacing: 0) {
       
+      // Боковое меню (слева)
       SideMenu()
       
+      // Текущая страница
       Group {
         switch currentPage {
         case .fight:
@@ -28,8 +31,11 @@ struct ContentView: View {
       .padding()
       .frame(maxWidth: .infinity)
     }
-    .inject(container)
+    
     .ignoresSafeArea(.all)
+
+    .inject(container)
+    
     .onReceive(currentPageUpdate) { page in
       currentPage = page
     }
@@ -44,6 +50,7 @@ struct ContentView: View {
 
 extension ContentView {
   
+  /// Подписка под обновление статуса текущей страницы
   var currentPageUpdate: AnyPublisher<Container.Routes, Never> {
     container.appState.updates(for: \.currentPage)
   }

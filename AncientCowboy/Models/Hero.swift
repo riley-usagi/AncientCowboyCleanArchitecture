@@ -1,4 +1,6 @@
+/// Модель Героя
 struct Hero: Equatable {
+  
   var name: String
   var hp: Int = 111
   

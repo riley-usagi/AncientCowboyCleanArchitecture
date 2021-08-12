@@ -1,6 +1,7 @@
 import CoreData
 import SwiftUI
 
+/// Модель игрового Предмета
 struct Item: Identifiable, Equatable, Codable {
   
   var id: String = UUID().uuidString
@@ -82,6 +83,11 @@ extension Item {
 
 extension Item {
   
+  #warning("Попробовать преобразовать в Result")
+  
+  /// Часть процесса сохранения игрового предмета в CoreData
+  /// - Parameter context: Объект Контекста
+  /// - Returns: Необязательный объект из Базы данных
   @discardableResult func store(in context: NSManagedObjectContext) -> ItemModelObject? {
     guard let details = ItemModelObject.insertNew(in: context) else { return nil }
     

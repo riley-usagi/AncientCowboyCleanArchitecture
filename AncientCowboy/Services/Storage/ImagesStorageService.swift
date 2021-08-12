@@ -1,14 +1,28 @@
 import Combine
 import SwiftUI
 
+/// Сервис для работы с изобаржениями из локального хранилища
 protocol ImagesStorageService {
+  
+  /// Загрузка изображения из хранилища
+  /// - Parameters:
+  ///   - theme: Тема изображения
+  ///   - id: id
   func load(theme: ImageTheme, id: Int) -> AnyPublisher<UIImage?, Error>
+  
+  /// Процесс сохранения изображения в локальное хранилище
+  /// - Parameters:
+  ///   - image: Объект Изображения
+  ///   - id: id
+  ///   - theme: Тема изображения
   func save(image: UIImage, id: Int, theme: ImageTheme) -> AnyPublisher<UIImage, Error>
 }
 
 
+/// Сервис для работы с изобаржениями из локального хранилища
 struct RealImagesStorageService: ImagesStorageService {
   
+  /// Объект файлового менеджера
   let fileManager = FileManager.default
   
   func load(theme: ImageTheme, id: Int) -> AnyPublisher<UIImage?, Error> {

@@ -2,6 +2,8 @@ import Foundation
 
 extension AppEnvironment {
   
+  /// Процесс настройки объекта сессии
+  /// - Returns: Настреонный объект сессии
   static func configuredSession() -> URLSession {
     let configuration = URLSessionConfiguration.default
     

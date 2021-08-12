@@ -1,6 +1,7 @@
 import CoreData
 import SwiftUI
 
+/// Модель объекта предмета из инвентаря
 struct InventoryItem: Identifiable, Equatable {
   
   
@@ -25,6 +26,9 @@ extension InventoryItem {
 
 extension InventoryItem {
   
+  /// Часть процесса сохранения игрового предмета в CoreData
+  /// - Parameter context: Объект Контекста
+  /// - Returns: Необязательный объект из Базы данных
   @discardableResult func store(in context: NSManagedObjectContext) -> InventoryItemModelObject? {
     
     guard let details = InventoryItemModelObject.insertNew(in: context) else { return nil }

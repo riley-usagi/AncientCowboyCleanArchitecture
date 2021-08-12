@@ -1,5 +1,6 @@
 import Foundation
 
+/// Список с "ленивыми" данными
 struct LazyList<T> {
   
   typealias Access = (Int) throws -> T?
@@ -18,6 +19,10 @@ struct LazyList<T> {
     self.access   = access
   }
   
+  /// Доступ к элементу ленивого списка
+  /// - Parameter index: Индекс обращения
+  /// - Throws: Возможная ошибка
+  /// - Returns: Элемент
   func element(at index: Int) throws -> T {
     
     guard useCache else {

@@ -3,20 +3,27 @@ import SwiftUI
 
 struct RegistrationScreen: View {
   
+  /// Контейнер с зависимостями
   @Environment(\.container) var container: Container
   
+  /// Текущий статус регистрации пользователя
   @Binding var registrationStatus: RegistrationStatus
   
+  /// Статус предзагрузки игровых данных
   @State private var dataPreloaded: Bool = false
   
+  /// Текущий выбранный пол Героя
   @State var gender = "male"
   
+  /// Имя Героя
   @State var name = ""
   
+  /// Текущий стату Героя
   @State var stats: [String: Int] = [
     "STR": 1, "AGI": 1, "VIT": 1, "INT": 1, "DEX": 1, "LUK": 1
   ]
   
+  /// Доступное количество очков для распределения статов Героя
   @State var statPoints: Int = 24
   
   var body: some View {

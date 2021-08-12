@@ -1,10 +1,15 @@
 import Combine
 import UIKit
 
+/// Сервис для работы с изображениями на удалённом сервере
 protocol ImagesWebService: WebService {
+  
+  /// Загрузка изображения монстра с удалённого сервера
+  /// - Parameter ingameid: Внутреигровой id монстра
   func loadMonsterImage(ingameid: Int) -> AnyPublisher<UIImage, Error>
 }
 
+/// Сервис для работы с изображениями на удалённом сервере
 struct RealImagesWebService: ImagesWebService {
   
   let session: URLSession

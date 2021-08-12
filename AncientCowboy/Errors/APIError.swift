@@ -1,12 +1,18 @@
 import Foundation
 
+/// Список возможных ошибок относительно сетевых запросов
 enum APIError: Swift.Error {
+  
+  /// Неправильная ссылка
   case invalidURL
   
+  /// Не подоходящий код ответа
   case httpCode(Int)
   
+  /// неожиданный ответ от сервера
   case unexpectedResponse
   
+  /// Ошибка обработки изображения
   case imageProcessing([URLRequest])
   
   var errorDescription: String? {

@@ -2,6 +2,7 @@ import Combine
 
 extension Subscribers.Completion {
   
+  /// Ошибка для подписок
   var error: Failure? {
     switch self {
     

@@ -1,14 +1,19 @@
 import Combine
 import CoreData
 
+/// Сервис для работы с Игровыми предметами в локальной базе данных
 protocol ItemsDBService {
   func storeAllItemsFromWeb(_ items: [Item]) -> AnyPublisher<Void, Error>
   
+  /// Игровой предмет из локальной базы данных по его id
+  /// - Parameter ingameid: Внутренний id игрового предмета
   func item(ingameid: Int) -> AnyPublisher<Item?, Error>
 }
 
+/// Сервис для работы с Игровыми предметами в локальной базе данных
 struct RealItemsDBService: ItemsDBService {
   
+  /// Объект точки доступа к локальной базе данных
   let persistentStore: PersistentStore
   
   func storeAllItemsFromWeb(_ items: [Item]) -> AnyPublisher<Void, Error> {

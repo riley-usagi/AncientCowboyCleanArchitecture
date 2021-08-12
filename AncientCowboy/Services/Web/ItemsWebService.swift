@@ -1,10 +1,15 @@
 import Combine
 import Foundation
 
+/// Сервис для работы с игровыми Предметами на удалённом сервере
 protocol ItemsWebService: WebService {
+  
+  /// Загрузка всех игровых предметов с удалённого сервера
   func loadItemsFromWeb() -> AnyPublisher<[Item], Error>
 }
 
+
+/// Сервис для работы с игровыми Предметами на удалённом сервере
 struct RealItemsWebService: ItemsWebService {
 
   var session: URLSession

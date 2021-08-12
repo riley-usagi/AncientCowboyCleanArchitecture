@@ -15,15 +15,19 @@ extension AppEnvironment {
     /// Локальное динамическое хранилище
     let appState    = Store<AppState>(AppState())
     
-    /// Настроенный
+    /// Настроенный объект сессии для запросов в интернет
     let session     = configuredSession()
     
+    /// Список web-сервисов
     let webServices = configuredWebServices(session: session)
     
+    /// Список сервисов для работы с локальной базой данных
     let dbServices  = configuredDBServices()
     
+    /// Список сервисов для работы с FireBase
     let fbServices  = configuredFBServices()
     
+    /// Список сервисов для работы с локальным хранилищем
     let storageServices = configuredStorageServices()
     
     /// Список настроенных интеракторов

@@ -2,11 +2,21 @@ import Combine
 import FirebaseFirestore
 import SwiftUI
 
+/// Сервис для работы с героями из FireStore
 protocol HeroesFBService {
+  
+  /// Загрузка героя с сервера
+  /// - Parameter deviceID: Уникальный ID устройства
   func loadHeroFromServer(deviceID: String) -> AnyPublisher<Hero?, Error>
+  
+  /// Процесс создания Героя на сервере FireBase
+  /// - Parameters:
+  ///   - heroFromForm: Объект Героя из формы на Экране
+  ///   - deviceID: Уникальный id устройства
   func createHeroInFireStore(_ heroFromForm: Hero, deviceID: String) -> AnyPublisher<Bool, Error>
 }
 
+/// Сервис для работы с героями из FireStore
 struct RealHeroesFBService: HeroesFBService {
   
   func loadHeroFromServer(deviceID: String) -> AnyPublisher<Hero?, Error> {
@@ -73,6 +83,8 @@ struct RealHeroesFBService: HeroesFBService {
 }
 
 
+#warning("Вынести в отдельный файл")
+/// Список возможных ошибок работы с FireBase
 enum FireBaseError: Swift.Error {
   case heroCreatingError
   case heroNotFound
@@ -82,9 +94,12 @@ extension FireBaseError {
   
   var errorDescription: String? {
     switch self {
+    
+    /// Ошибка создания Героя
     case .heroCreatingError:
       return "Hero creating error"
       
+    /// Герой не найден
     case .heroNotFound:
       return "Hero not found"
     }
