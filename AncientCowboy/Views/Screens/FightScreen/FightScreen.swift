@@ -7,7 +7,7 @@ struct FightScreen: View {
   
   @State private var enemy: Loadable<Monster>
   
-  @State var heroAttackTimer = Timer.publish(every: 0.5, on: .main, in: .common)
+  @State var heroAttackTimer = Timer.publish(every: 0.1, on: .main, in: .common)
   
   init(enemy: Loadable<Monster> = .notRequested) {
     self._enemy = .init(initialValue: enemy)
@@ -73,9 +73,11 @@ extension FightScreen {
         
         self.heroAttackTimer.connect().cancel()
         
+        container.interactors.inventoryInteractor.collectLootedItems(from: enemy)
+        
         container.interactors.monstersInteractor.reloadEnemy($enemy)
         
-        self.heroAttackTimer = Timer.publish(every: 0.5, on: .main, in: .common)
+        self.heroAttackTimer = Timer.publish(every: 0.1, on: .main, in: .common)
         
         _ = self.heroAttackTimer.connect()
         

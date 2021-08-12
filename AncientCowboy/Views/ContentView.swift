@@ -28,8 +28,8 @@ struct ContentView: View {
       .padding()
       .frame(maxWidth: .infinity)
     }
-    .ignoresSafeArea(.all)
     .inject(container)
+    .ignoresSafeArea(.all)
     .onReceive(currentPageUpdate) { page in
       currentPage = page
     }

@@ -38,8 +38,13 @@ struct RealInventoryInteractor: InventoryInteractor {
 
       itemsDBService
         .item(ingameid: itemID)
-        .sink { _ in } receiveValue: { item in
-          inventoryDBService.saveItemToInventory(by: itemID, itemType: item!.itemType)
+        .sinkToResult { result in
+          switch result {
+          case let .success(item):
+            inventoryDBService.saveItemToInventory(by: itemID, itemType: item!.itemType)
+          case let .failure(error):
+            print(String(describing: error))
+          }
         }
         .store(in: cancelBag)
     }
