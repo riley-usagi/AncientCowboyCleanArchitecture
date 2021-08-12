@@ -1,12 +1,6 @@
 import Combine
 import SwiftUI
 
-enum ImageTheme: String, CaseIterable {
-  case monsters
-  case items
-  case locations
-}
-
 protocol ImagesStorageService {
   func load(theme: ImageTheme, id: Int) -> AnyPublisher<UIImage?, Error>
   func save(image: UIImage, id: Int, theme: ImageTheme) -> AnyPublisher<UIImage, Error>
@@ -16,21 +10,6 @@ protocol ImagesStorageService {
 struct RealImagesStorageService: ImagesStorageService {
   
   let fileManager = FileManager.default
-  
-  init() {
-    
-    for path in ImageTheme.allCases {
-      do {
-        
-        let imagesFolderUrl: URL = url()!.appendingPathComponent(path.rawValue + "Images")
-        
-        try fileManager.createDirectory(atPath: imagesFolderUrl.path, withIntermediateDirectories: true, attributes: nil)
-        
-      } catch {
-        print(String(describing: error))
-      }
-    }
-  }
   
   func load(theme: ImageTheme, id: Int) -> AnyPublisher<UIImage?, Error> {
     let url = url()!
@@ -53,7 +32,6 @@ struct RealImagesStorageService: ImagesStorageService {
     let imagesFolderUrl: URL = url.appendingPathComponent(theme.rawValue + "Images")
     
     let fileURL = imagesFolderUrl.appendingPathComponent("\(id).gif")
-    
     
     let fileContent = image.pngData()!
     

@@ -34,32 +34,48 @@ struct RealMonstersInteractor: MonstersInteractor {
     
     let randomMonsterId: Int = [1002, 1113, 1079, 1183, 1009].randomElement()!
     
-    
     imagesStorageService
+    
       .load(theme: .monsters, id: randomMonsterId)
+    
       .flatMap { optionalImage -> AnyPublisher<UIImage, Error> in
-        return imagesWebService.loadMonsterImage(ingameid: randomMonsterId)
+        if let image = optionalImage {
+          return Just<UIImage>.withErrorType(image, Error.self)
+        } else {
+          return checkAndSaveImage(id: randomMonsterId)
+        }
       }
-      .flatMap { image -> AnyPublisher<UIImage, Error> in
-        imagesStorageService.save(image: image, id: randomMonsterId, theme: .monsters)
-      }
+    
       .zip(dbService.monster(ingameid: randomMonsterId))
-      .flatMap { (image, optionalMonster) -> AnyPublisher<Monster?, Error> in
-        
+    
+      .flatMap { enemyImage, optionalMonster -> AnyPublisher<Monster?, Error> in
         if var monster = optionalMonster {
-          
-          monster.image = image
+          monster.image = enemyImage
           
           return Just<Monster?>.withErrorType(monster, Error.self)
         } else {
           return Just<Monster?>.withErrorType(nil, Error.self)
         }
-        
       }
+    
       .sinkToLoadable { optionalMonster in
         enemy.wrappedValue = optionalMonster.unwrap()
       }
+    
       .store(in: cancelBag)
+  }
+  
+  func checkAndSaveImage(id: Int) -> AnyPublisher<UIImage, Error> {
+    return imagesWebService
+      
+      .loadMonsterImage(ingameid: id)
+    
+      .flatMap { image -> AnyPublisher<UIImage, Error> in
+        imagesStorageService.save(image: image, id: id, theme: .monsters)
+      }
+    
+      .eraseToAnyPublisher()
+    
   }
   
   func storeAllMonstersFromWeb() {
