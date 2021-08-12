@@ -4,12 +4,14 @@ extension AppEnvironment {
     
     let persistentStore = CoreDataStack()
     
-    let itemsDBService    = RealItemsDBService(persistentStore: persistentStore)
-    let monstersDBService = RealMonstersDBService(persistentStore: persistentStore)
+    let itemsDBService      = RealItemsDBService(persistentStore: persistentStore)
+    let monstersDBService   = RealMonstersDBService(persistentStore: persistentStore)
+    let inventoryDBService  = RealInventoryDBService(persistentStore: persistentStore)
     
     return .init(
       itemsDBService: itemsDBService,
-      monstersDBService: monstersDBService
+      monstersDBService: monstersDBService,
+      inventoryDBService: inventoryDBService
     )
   }
 }

@@ -28,10 +28,16 @@ extension AppEnvironment {
       imagesWebService: webServices.imagesWebService
     )
     
+    let inventoryInteractor = RealInventoryInteractor(
+      inventoryDBService: dbServices.inventoryDBService,
+      itemsDBService: dbServices.itemsDBService
+    )
+    
     return .init(
+      monstersInteractor: monstersInteractor,
       itemsInteractor: itemsInteractor,
-      heroesInteractor: heroesInteractor,
-      monstersInteractor: monstersInteractor
+      inventoryInteractor: inventoryInteractor,
+      heroesInteractor: heroesInteractor
     )
   }
 }

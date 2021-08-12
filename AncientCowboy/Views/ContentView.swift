@@ -20,11 +20,12 @@ struct ContentView: View {
       Group {
         switch currentPage {
         case .fight:
-          AnyView(FightScreen())
+          FightScreen()
         case .inventory:
-          AnyView(Text("Inventory"))
+          InventoryScreen()
         }
       }
+      .padding()
       .frame(maxWidth: .infinity)
     }
     .ignoresSafeArea(.all)

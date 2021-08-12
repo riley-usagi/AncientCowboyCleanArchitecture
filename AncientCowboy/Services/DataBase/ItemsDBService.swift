@@ -3,6 +3,8 @@ import CoreData
 
 protocol ItemsDBService {
   func storeAllItemsFromWeb(_ items: [Item]) -> AnyPublisher<Void, Error>
+  
+  func item(ingameid: Int) -> AnyPublisher<Item?, Error>
 }
 
 struct RealItemsDBService: ItemsDBService {
@@ -17,6 +19,18 @@ struct RealItemsDBService: ItemsDBService {
           item.store(in: context)
         }
       }
+  }
+  
+  func item(ingameid: Int) -> AnyPublisher<Item?, Error> {
+    
+    let fetchRequest = ItemModelObject.item(by: ingameid)
+    
+    return persistentStore
+      .fetch(fetchRequest) { fetchedMonster in
+        Item(managedObject: fetchedMonster)
+      }
+      .map { $0.first }
+      .eraseToAnyPublisher()
   }
 }
 

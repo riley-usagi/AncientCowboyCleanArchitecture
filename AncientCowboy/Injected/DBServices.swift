@@ -5,11 +5,15 @@ extension Container {
     
     let monstersDBService: MonstersDBService
     
+    let inventoryDBService: InventoryDBService
+    
     init(
       itemsDBService: ItemsDBService,
-      monstersDBService: MonstersDBService) {
+      monstersDBService: MonstersDBService,
+      inventoryDBService: InventoryDBService) {
       self.itemsDBService     = itemsDBService
       self.monstersDBService  = monstersDBService
+      self.inventoryDBService = inventoryDBService
     }
   }
 }

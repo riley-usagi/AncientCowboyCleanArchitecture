@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AppState: Equatable {
   
-  var currentPage: Container.Routes = .inventory
+  var currentPage: Container.Routes = .fight
   
   var dataPreloaded: Bool {
     get {

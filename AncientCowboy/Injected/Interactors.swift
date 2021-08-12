@@ -2,28 +2,33 @@ extension Container {
   
   struct Interactors {
     
+    let monstersInteractor: MonstersInteractor
+    
     let itemsInteractor: ItemsInteractor
+    
+    let inventoryInteractor: InventoryInteractor
     
     let heroesInteractor: HeroesInteractor
     
-    let monstersInteractor: MonstersInteractor
-    
     static var stub: Self {
       .init(
+        monstersInteractor: StubMonstersInteractor(),
         itemsInteractor: StubItemsInteractor(),
-        heroesInteractor: StubHeroesInteractor(),
-        monstersInteractor: StubMonstersInteractor()
+        inventoryInteractor: StubInventoryInteractor(),
+        heroesInteractor: StubHeroesInteractor()
       )
     }
     
     init(
+      monstersInteractor: MonstersInteractor,
       itemsInteractor: ItemsInteractor,
-      heroesInteractor: HeroesInteractor,
-      monstersInteractor: MonstersInteractor
+      inventoryInteractor: InventoryInteractor,
+      heroesInteractor: HeroesInteractor
     ) {
-      self.itemsInteractor    = itemsInteractor
-      self.heroesInteractor   = heroesInteractor
-      self.monstersInteractor = monstersInteractor
+      self.monstersInteractor   = monstersInteractor
+      self.itemsInteractor      = itemsInteractor
+      self.inventoryInteractor  = inventoryInteractor
+      self.heroesInteractor     = heroesInteractor
     }
   }
 }
