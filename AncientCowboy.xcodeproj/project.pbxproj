@@ -28,6 +28,8 @@
 		BF25DC9E26B98AA3006D4F5C /* ConfiguredWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */; };
 		BF25DCA026B98B24006D4F5C /* ConfiguredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */; };
 		BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF59E09C26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld */; };
+		BF6015FB26C4F9640058CFBE /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6015FA26C4F9640058CFBE /* SideMenu.swift */; };
+		BF6015FD26C4F9A10058CFBE /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6015FC26C4F9A10058CFBE /* Routes.swift */; };
 		BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */; };
 		BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */; };
 		BF65B8AB26C1035600241A2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8AA26C1035600241A2A /* Hero.swift */; };
@@ -99,6 +101,8 @@
 		BF25DC9D26B98AA3006D4F5C /* ConfiguredWebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWebServices.swift; sourceTree = "<group>"; };
 		BF25DC9F26B98B24006D4F5C /* ConfiguredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredSession.swift; sourceTree = "<group>"; };
 		BF59E09D26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AncientCowboyDataBase.xcdatamodel; sourceTree = "<group>"; };
+		BF6015FA26C4F9640058CFBE /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		BF6015FC26C4F9A10058CFBE /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesInteractor.swift; sourceTree = "<group>"; };
 		BF65B8AA26C1035600241A2A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */,
+				BF6015FA26C4F9640058CFBE /* SideMenu.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -392,11 +397,12 @@
 			children = (
 				BF6A78CF26B93C0F007BA8AF /* AppState.swift */,
 				BFBC6BCC26B802D20069C51F /* Container.swift */,
-				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
-				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
 				BF77604326BEB44000B3D43E /* DBServices.swift */,
 				BF65B8B426C112CC00241A2A /* FBServices.swift */,
+				BFE72EDB26B818EC00008CBC /* Interactors.swift */,
+				BF6015FC26C4F9A10058CFBE /* Routes.swift */,
 				BFBDE70526C2545600249688 /* StorageServices.swift */,
+				BF25DC9B26B98A26006D4F5C /* WebServices.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 				BF940DF426B7EB2000906BB9 /* ContentView.swift in Sources */,
 				BF0EDC1126C12AA200AAB245 /* Monster.swift in Sources */,
 				BFBC6BCF26B802F10069C51F /* AppEnvironment.swift in Sources */,
+				BF6015FB26C4F9640058CFBE /* SideMenu.swift in Sources */,
 				BF25DC9726B98801006D4F5C /* ItemsWebService.swift in Sources */,
 				BF0EDC1726C12B6E00AAB245 /* MonstersDBService.swift in Sources */,
 				BF796F4A26C14F6400D21999 /* LazyList.swift in Sources */,
@@ -575,6 +582,7 @@
 				BF25DC9126B975E0006D4F5C /* WebService.swift in Sources */,
 				BF97543826BFBF7A001DC3ED /* ItemModelObject+CoreDataProperties.swift in Sources */,
 				BF19F8F626C15F6700A18D86 /* FightScreen.swift in Sources */,
+				BF6015FD26C4F9A10058CFBE /* Routes.swift in Sources */,
 				BF940DF226B7EB2000906BB9 /* AncientCowboyApp.swift in Sources */,
 				BF77604226BEB3AB00B3D43E /* ItemsDBService.swift in Sources */,
 				BFDED2F726B9AB6900B05A5E /* AnyCancellableExtension.swift in Sources */,
