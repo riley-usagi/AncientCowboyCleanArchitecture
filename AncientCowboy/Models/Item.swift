@@ -26,7 +26,7 @@ struct Item: Identifiable, Equatable, Codable {
   var equipScript: String?
   var unequipScript: String?
   
-  var image: UIImage?
+  var image: UIImage = UIImage(systemName: "leaf")!
   
   enum CodingKeys: String, CodingKey {
     case name = "name_japanese"

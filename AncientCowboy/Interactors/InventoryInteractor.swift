@@ -17,6 +17,9 @@ protocol InventoryInteractor {
   /// Процесс продажи предметов
   /// - Parameter ingameid: Внутренний id предмета
   func soldItem(ingameid: Int)
+  
+  
+  func loadItem(itemDetails: LoadableSubject<Item>, ingameid: Int)
 }
 
 /// Интерактор для работы с Инвентарём героя
@@ -27,6 +30,10 @@ struct RealInventoryInteractor: InventoryInteractor {
   
   /// Сервис для работы с игровыми Предметами из локальной базы данных
   let itemsDBService: ItemsDBService
+  
+  let imagesStorageService: ImagesStorageService
+  
+  let imagesWebService: ImagesWebService
 
   /// Мешок для подписок
   let cancelBag = CancelBag()
@@ -70,6 +77,52 @@ struct RealInventoryInteractor: InventoryInteractor {
 
   func soldItem(ingameid: Int) {
     print(ingameid)
+  }
+  
+  func loadItem(itemDetails: LoadableSubject<Item>, ingameid: Int) {
+    itemDetails.wrappedValue.setIsLoading(cancelBag: cancelBag)
+
+    
+    imagesStorageService
+      .load(theme: .items, id: ingameid)
+    
+      .flatMap { optionalImage -> AnyPublisher<UIImage, Error> in
+        if let image = optionalImage {
+          return Just<UIImage>.withErrorType(image, Error.self)
+        } else {
+          return checkAndSaveImage(id: ingameid)
+        }
+      }
+    
+      .zip(itemsDBService.item(ingameid: ingameid))
+    
+      .flatMap { itemImage, optionalItem -> AnyPublisher<Item?, Error> in
+        if var item = optionalItem {
+          item.image = itemImage
+          
+          return Just<Item?>.withErrorType(item, Error.self)
+        } else {
+          return Just<Item?>.withErrorType(nil, Error.self)
+        }
+      }
+    
+      .sinkToLoadable { optionalItem in
+        itemDetails.wrappedValue = optionalItem.unwrap()
+      }
+    
+      .store(in: cancelBag)
+  }
+  
+  func checkAndSaveImage(id: Int) -> AnyPublisher<UIImage, Error> {
+    return imagesWebService
+      
+      .loadItemImage(ingameid: id)
+    
+      .flatMap { image -> AnyPublisher<UIImage, Error> in
+        imagesStorageService.save(image: image, id: id, theme: .monsters)
+      }
+    
+      .eraseToAnyPublisher()
   }
 }
 
@@ -135,4 +188,5 @@ struct StubInventoryInteractor: InventoryInteractor {
   func loadInventoryItems(items: LoadableSubject<LazyList<InventoryItem>>) {}
   func collectLootedItems(from monster: Monster) {}
   func soldItem(ingameid: Int) {}
+  func loadItem(itemDetails: LoadableSubject<Item>, ingameid: Int) {}
 }

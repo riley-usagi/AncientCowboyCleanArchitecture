@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF03D73C26CABFD400B89C6A /* InventoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03D73B26CABFD400B89C6A /* InventoryCellView.swift */; };
 		BF0EDC0C26C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0826C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift */; };
 		BF0EDC0D26C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0926C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift */; };
 		BF0EDC0E26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0EDC0A26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift */; };
@@ -86,6 +87,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF03D73B26CABFD400B89C6A /* InventoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCellView.swift; sourceTree = "<group>"; };
 		BF0EDC0826C12A3700AAB245 /* InventoryItemModelObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryItemModelObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BF0EDC0926C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InventoryItemModelObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BF0EDC0A26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonsterModelObject+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				BF649EE826CA5EA400B77C1F /* InventoryListView.swift */,
 				BF649EEA26CA604A00B77C1F /* ItemType.swift */,
+				BF03D73B26CABFD400B89C6A /* InventoryCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				BF0EDC1526C12B4A00AAB245 /* MonstersWebService.swift in Sources */,
 				BF0EDC0D26C12A3700AAB245 /* InventoryItemModelObject+CoreDataProperties.swift in Sources */,
 				BF65B8AB26C1035600241A2A /* Hero.swift in Sources */,
+				BF03D73C26CABFD400B89C6A /* InventoryCellView.swift in Sources */,
 				BFBDE70826C254A000249688 /* ConfiguredStorageServices.swift in Sources */,
 				BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */,
 				BF0EDC0E26C12A3700AAB245 /* MonsterModelObject+CoreDataClass.swift in Sources */,

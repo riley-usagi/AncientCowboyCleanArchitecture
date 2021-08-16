@@ -32,8 +32,8 @@ struct SideMenu: View {
       )
       .ignoresSafeArea()
     )
-    .padding(.trailing, 0)
-    .zIndex(1)
+//    .padding(.trailing, 0)
+//    .zIndex(1)
   }
 }
 

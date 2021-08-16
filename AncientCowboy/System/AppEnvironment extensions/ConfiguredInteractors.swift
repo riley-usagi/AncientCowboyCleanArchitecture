@@ -41,7 +41,9 @@ extension AppEnvironment {
     /// Интерактор для работы с инвентарём
     let inventoryInteractor = RealInventoryInteractor(
       inventoryDBService: dbServices.inventoryDBService,
-      itemsDBService: dbServices.itemsDBService
+      itemsDBService: dbServices.itemsDBService,
+      imagesStorageService: storageServices.imagesStorageService,
+      imagesWebService: webServices.imagesWebService
     )
     
     return .init(

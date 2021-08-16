@@ -81,7 +81,6 @@ struct RealMonstersInteractor: MonstersInteractor {
       }
     
       .eraseToAnyPublisher()
-    
   }
   
   func storeAllMonstersFromWeb() {

@@ -16,7 +16,20 @@ struct FightScreen: View {
   }
   
   var body: some View {
-    content
+    
+    GeometryReader { reader in
+      ZStack {
+        
+        Image("background")
+          .resizable()
+          .aspectRatio(contentMode: .fill)
+          .padding([.leading], 240)
+        
+        content
+      }
+      .ignoresSafeArea()
+      .frame(width: reader.size.width * 0.8)
+    }
   }
 }
 
