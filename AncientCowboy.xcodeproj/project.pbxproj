@@ -34,8 +34,8 @@
 		BF60160226C504690058CFBE /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60160126C504690058CFBE /* InventoryItem.swift */; };
 		BF60160426C504970058CFBE /* InventoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60160326C504970058CFBE /* InventoryInteractor.swift */; };
 		BF60160626C505010058CFBE /* InventoryDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60160526C505010058CFBE /* InventoryDBService.swift */; };
-		BF60160926C506030058CFBE /* InventoryTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60160826C506030058CFBE /* InventoryTabBarButton.swift */; };
-		BF60160B26C5061E0058CFBE /* InventoryItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60160A26C5061E0058CFBE /* InventoryItemsListView.swift */; };
+		BF649EE926CA5EA400B77C1F /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649EE826CA5EA400B77C1F /* InventoryListView.swift */; };
+		BF649EEB26CA604A00B77C1F /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649EEA26CA604A00B77C1F /* ItemType.swift */; };
 		BF65B8A726C101D100241A2A /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */; };
 		BF65B8A926C1022B00241A2A /* HeroesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */; };
 		BF65B8AB26C1035600241A2A /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65B8AA26C1035600241A2A /* Hero.swift */; };
@@ -113,8 +113,8 @@
 		BF60160126C504690058CFBE /* InventoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
 		BF60160326C504970058CFBE /* InventoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryInteractor.swift; sourceTree = "<group>"; };
 		BF60160526C505010058CFBE /* InventoryDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryDBService.swift; sourceTree = "<group>"; };
-		BF60160826C506030058CFBE /* InventoryTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryTabBarButton.swift; sourceTree = "<group>"; };
-		BF60160A26C5061E0058CFBE /* InventoryItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemsListView.swift; sourceTree = "<group>"; };
+		BF649EE826CA5EA400B77C1F /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
+		BF649EEA26CA604A00B77C1F /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		BF65B8A626C101D100241A2A /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		BF65B8A826C1022B00241A2A /* HeroesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesInteractor.swift; sourceTree = "<group>"; };
 		BF65B8AA26C1035600241A2A /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 		BF60160726C505FC0058CFBE /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				BF60160826C506030058CFBE /* InventoryTabBarButton.swift */,
-				BF60160A26C5061E0058CFBE /* InventoryItemsListView.swift */,
+				BF649EE826CA5EA400B77C1F /* InventoryListView.swift */,
+				BF649EEA26CA604A00B77C1F /* ItemType.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -609,8 +609,8 @@
 				BFDED30526B9B91300B05A5E /* OptionalExtension.swift in Sources */,
 				BF796F4C26C14FCF00D21999 /* LazyListCache.swift in Sources */,
 				BF0EDC1326C12AE100AAB245 /* MonstersInteractor.swift in Sources */,
-				BF60160926C506030058CFBE /* InventoryTabBarButton.swift in Sources */,
 				BFDED30726B9B9E300B05A5E /* ManagedEntityExtension.swift in Sources */,
+				BF649EE926CA5EA400B77C1F /* InventoryListView.swift in Sources */,
 				BF60160426C504970058CFBE /* InventoryInteractor.swift in Sources */,
 				BF59E09E26BEAD3D00C6AF32 /* AncientCowboyDataBase.xcdatamodeld in Sources */,
 				BF25DC9A26B98848006D4F5C /* Item.swift in Sources */,
@@ -633,11 +633,11 @@
 				BFE72EDC26B818EC00008CBC /* Interactors.swift in Sources */,
 				BF60160626C505010058CFBE /* InventoryDBService.swift in Sources */,
 				BFE72ED726B8134800008CBC /* ViewExtension.swift in Sources */,
+				BF649EEB26CA604A00B77C1F /* ItemType.swift in Sources */,
 				BF25DC8F26B974B4006D4F5C /* PublisherExtension.swift in Sources */,
 				BF796F4E26C151D700D21999 /* LazyListIterator.swift in Sources */,
 				BF77603F26BEAF2D00B3D43E /* NSSetExtension.swift in Sources */,
 				BFDED2F926B9ABA300B05A5E /* ErrorExtension.swift in Sources */,
-				BF60160B26C5061E0058CFBE /* InventoryItemsListView.swift in Sources */,
 				BF25DC8B26B96FB6006D4F5C /* APIError.swift in Sources */,
 				BF65B8B726C1131500241A2A /* ConfiguredFBServices.swift in Sources */,
 			);
