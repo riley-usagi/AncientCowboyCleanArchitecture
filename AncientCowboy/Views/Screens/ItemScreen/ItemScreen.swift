@@ -64,6 +64,17 @@ struct ItemScreen: View {
         }
         
         
+        // MARK: - Defence
+        HStack {
+          Text("Defence: ")
+            .font(.headline)
+          
+          Spacer()
+          
+          Text(String(item.defence ?? 0))
+        }
+        
+        
         // MARK: - Equip level
         HStack {
           Text("Equip level: ")
@@ -73,8 +84,48 @@ struct ItemScreen: View {
           
           Text(String(item.equipLevel ?? 1))
         }
+        
+        
+        // MARK: - Refineable
+        HStack {
+          Text("Refineable: ")
+            .font(.headline)
+          
+          Spacer()
+          
+          Text(String(item.refineable == 1 ? "Yes" : "No"))
+        }
+        
+        
+        // MARK: - Slots
+        HStack {
+          Text("Slots: ")
+            .font(.headline)
+          
+          Spacer()
+          
+          Text(String(item.slots ?? 0))
+        }
+        
+        
+        // MARK: - Script
+        HStack(spacing: 10) {
+          Text("Script: ")
+            .font(.headline)
+          
+          Spacer()
+          
+          Text(item.script ?? "None")
+            .multilineTextAlignment(.leading)
+        }
       }
       .padding([.leading, .trailing], 50)
+      
+      Button(action: {
+        print(item.priceBuy ?? 0)
+      }, label: {
+        Text("Sell")
+      })
       
       Spacer()
     }
