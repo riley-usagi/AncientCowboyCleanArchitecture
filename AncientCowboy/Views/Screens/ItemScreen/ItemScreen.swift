@@ -4,8 +4,11 @@ struct ItemScreen: View {
   
   let item: Item
   
-  init(_ item: Item) {
-    self.item = item
+  let fromInventory: Bool
+  
+  init(item: Item, fromInventory: Bool) {
+    self.item           = item
+    self.fromInventory  = fromInventory
   }
   
   var body: some View {
@@ -121,11 +124,13 @@ struct ItemScreen: View {
       }
       .padding([.leading, .trailing], 50)
       
-      Button(action: {
-        print(item.priceBuy ?? 0)
-      }, label: {
-        Text("Sell")
-      })
+      if fromInventory {
+        Button(action: {
+          print(item.priceBuy ?? 0)
+        }, label: {
+          Text("Sell")
+        })
+      }
       
       Spacer()
     }

@@ -62,7 +62,7 @@ extension InventoryCellView {
       Text(String(inventoryItem.itemCount) + " ea.")
     }
     .sheet(isPresented: $showItemStatus, content: {
-      ItemScreen(item)
+      ItemScreen(item: item, fromInventory: true)
     })
     .onTapGesture {
       showItemStatus.toggle()
