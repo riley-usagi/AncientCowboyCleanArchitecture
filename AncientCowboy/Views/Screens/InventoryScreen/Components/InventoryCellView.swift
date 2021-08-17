@@ -8,6 +8,8 @@ struct InventoryCellView: View {
   
   @State private var itemDetails: Loadable<Item>
   
+  @State private var showItemStatus: Bool = false
+  
   init(_ inventoryItem: InventoryItem, itemDetails: Loadable<Item> = .notRequested) {
     self.inventoryItem  = inventoryItem
     self._itemDetails   = .init(initialValue: itemDetails)
@@ -58,6 +60,12 @@ extension InventoryCellView {
       Spacer()
       
       Text(String(inventoryItem.itemCount) + " ea.")
+    }
+    .sheet(isPresented: $showItemStatus, content: {
+      ItemScreen(item)
+    })
+    .onTapGesture {
+      showItemStatus.toggle()
     }
   }
 }

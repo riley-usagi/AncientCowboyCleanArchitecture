@@ -16,7 +16,7 @@ import Foundation
 //  18  Another delayed consume that requires user confirmation before
 //    using item.
 
-enum ItemType {
+enum ItemType: String {
   case usable
   case equip
   case cards
@@ -33,6 +33,18 @@ enum ItemType {
       return [6]
     case .etc:
       return [3, 7, 8, 10, 11, 18]
+    }
+  }
+  
+  static func rawvalueByIntegerType(itemTypeInteger: Int) -> String {
+    if [0, 2].contains(itemTypeInteger) {
+      return (ItemType.usable.rawValue)
+    } else if [4, 5].contains(itemTypeInteger) {
+      return (ItemType.equip.rawValue)
+    } else if 6 == itemTypeInteger {
+      return (ItemType.cards.rawValue)
+    } else {
+      return (ItemType.etc.rawValue)
     }
   }
 }
