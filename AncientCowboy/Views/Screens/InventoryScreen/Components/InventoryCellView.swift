@@ -56,6 +56,8 @@ extension InventoryCellView {
       Text(item.name)
       
       Spacer()
+      
+      Text(String(inventoryItem.itemCount) + " ea.")
     }
   }
 }

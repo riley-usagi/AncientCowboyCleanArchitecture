@@ -22,13 +22,10 @@ struct FightScreen: View {
         
         Image("background")
           .resizable()
-          .aspectRatio(contentMode: .fill)
-          .padding([.leading], 240)
+          .aspectRatio(contentMode: .fit)
         
         content
       }
-      .ignoresSafeArea()
-      .frame(width: reader.size.width * 0.8)
     }
   }
 }
