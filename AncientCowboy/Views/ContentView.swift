@@ -28,7 +28,6 @@ struct ContentView: View {
           InventoryScreen()
         }
       }
-      .padding()
       .frame(maxWidth: .infinity)
     }
     
